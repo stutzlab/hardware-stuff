@@ -1,0 +1,99 @@
+'' MCP3422/3/4 I2C 18 bit ADC driver v1.0
+'' Written by Flavio Stutz @ StutzLab 2014
+
+CON
+
+  CHANNEL_1 = %00     
+  CHANNEL_2 = %01     
+  CHANNEL_3 = %10     
+  CHANNEL_4 = %11     
+
+  MODE_ONESHOT    = 0
+  MODE_CONTINUOUS = 1
+
+  PRECISION_12BITS = %00 '240 SPS
+  PRECISION_14BITS = %01 '60 SPS
+  PRECISION_16BITS = %10 '15 SPS
+  PRECISION_18BITS = %11 '3.75 SPS     
+
+  'voltages in nano volts to avoid floats
+  VOLTAGE_LSB_12BITS = 100000 '1mV
+  VOLTAGE_LSB_14BITS = 25000 '250uV
+  VOLTAGE_LSB_16BITS = 6250 '62.5uV
+  VOLTAGE_LSB_18BITS = 1563 '15.625uV
+
+  GAIN_X1 = %00 'PGA X1     
+  GAIN_X2 = %01 'PGA X2     
+  GAIN_X4 = %10 'PGA X4     
+  GAIN_X8 = %11 'PGA X8     
+
+VAR
+  byte sclPin
+  byte deviceAddressRead
+  byte deviceAddressWrite
+
+  'write configuration register parts   
+  byte precisionPart
+  byte numberOfBytes
+  byte gainFactor
+  long voltageLSB
+   
+OBJ
+  i2c : "BasicI2CDriver"
+   
+PUB initialize(i2cSclPin, deviceAddress)
+  i2c.initialize(i2cSclPin)   
+  if not i2c.devicePresent(i2cSclPin, deviceAddress)
+    abort false
+
+  sclPin := i2cSclPin
+  deviceAddressRead := deviceAddress | 1
+  deviceAddressWrite := deviceAddress | 0
+  
+PUB startSamplingVoltageOnDevice(channel, precision, gain)
+  if sclPin == 0
+    abort false
+
+  writeConfigurationRegister(sclPin, deviceAddressWrite, %0, channel, MODE_CONTINUOUS, precision, gain)
+
+  'prepare variables for later use
+  if precision == PRECISION_18BITS
+    numberOfBytes := 3
+    voltageLSB := VOLTAGE_LSB_18BITS 
+  elseif precision == PRECISION_16BITS
+    numberOfBytes := 2
+    voltageLSB := VOLTAGE_LSB_16BITS 
+  elseif precision == PRECISION_14BITS
+    numberOfBytes := 2
+    voltageLSB := VOLTAGE_LSB_14BITS 
+  elseif precision == PRECISION_12BITS
+    numberOfBytes := 2
+    voltageLSB := VOLTAGE_LSB_12BITS 
+
+  if gain == GAIN_X1
+    gainFactor := 1
+  elseif gain == GAIN_X2
+    gainFactor := 2
+  elseif gain == GAIN_X4
+    gainFactor := 4
+  elseif gain == GAIN_X8
+    gainFactor := 8
+
+
+
+PUB readVoltage : voltage | data2
+  'get raw data from device
+  data2 := i2c.readValue(sclPin, deviceAddressRead, numberOfBytes)
+  
+  'reverse from BigEndian (from device) to Propeller's LittleEndian
+  data2 := data2 >< (numberOfBytes*8)
+
+  'convert data to voltage
+'  voltage := data2 * (voltageLSB/gainFactor)
+'  voltage := %01111111111111111111111111111111 * (voltageLSB/gainFactor)
+
+PRI writeConfigurationRegister(i2cSclPin, deviceAddress, readyBit, channel, mode, adcPrecision, adcGain)
+  if i2c.writeValue(i2cSclPin, deviceAddressWrite, readyBit<<7 | channel<<5 | mode<<4 | adcPrecision<<2 | adcGain)
+    abort false
+    
+  

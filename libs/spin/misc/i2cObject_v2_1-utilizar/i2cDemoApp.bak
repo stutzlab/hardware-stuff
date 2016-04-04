@@ -1,0 +1,591 @@
+'' ******************************************************************************
+'' * I2C Demo Propeller program                                                 *
+'' * James Burrows Oct 2007                                                     *
+'' * Version 2.1                                                                *
+'' *                                                                            *
+'' * Demos:  i2cObject                                                          *
+'' * Uses :  Mike Green's "basic_i2c_driver" with a couple of extra bits        *
+'' *                                                                            *
+'' * demo'ing:                                                                  *
+'' *    DS1621, DS1307, MCP23016, SRF08, MD22 and EEPROM objects                *
+'' ******************************************************************************
+''
+'' this object provides the PUBLIC functions:
+''  -> Start  
+''
+'' this object provides the PRIVATE functions:
+''  -> DS1307_demo    - read the time for 30secs, demo the set and time/date roll-over
+''  -> DS1621_demo    - read the temperature for a few secs
+''  -> MD22_demo      - run the motor controller
+''  -> MD23_demo      - run the motor controller
+''  -> SD21_demo      - run a servo on the controller
+''  -> SRF08_demo     - read the distance and light from the sensors
+''  -> MCP23016_Demo  - flash some LED's with the the I/O expander
+''  -> EERPOM_demo    - write and read back 10 locations in the EEPROM
+''  -> i2cScan        - scan the bus. Show results on LCD
+''
+'' Revision History:
+''  -> V2 - re-release
+''          v2.1 = Slight update to i2cObject code (readLocation was ACKing instead of NAK'ing)
+''                 Added MD23 and SD21 objects.                
+''
+'' this object uses the following sub OBJECTS:
+''  -> basic_i2c_driver
+''  -> DS1621Object
+''  -> DS1307Object
+''  -> MCP23016Object
+''  -> SRF08Object
+''  -> MD22Object
+''  -> MD23Object
+''  -> SD21Object
+''
+''
+'' Part information:
+''  -> DS1307/DS1621/SRF08/SD21/MD22/MD23/MCP23016 - see the sub-objects documentation
+''  -> 24LC256 (32kb) or 24LC512 (64kb) - see www.microchip.com
+''
+''                        4.7K                       3.3V         3.3V           5V                5V         5V         5V
+''                    +---????---  3.3V      24LC256--+    DS1621--+     DS1307--+       MCP23016--+    SRF08--+   MD22--+
+''                    ¦ +-????---  3.3V        ¦ ¦          ¦ ¦            ¦ ¦             ¦ ¦            ¦ ¦       ¦ ¦
+''                    ¦ ¦                      ¦ ¦          ¦ ¦            ¦ ¦      1k     ¦ ¦            ¦ ¦       ¦ ¦
+''   Pin29/SDA -------?-+----------------------?-+----------?-+------------?-+------???----?-+------------?-+-------+ ¦
+''                      ¦                        ¦            ¦              ¦      1k       ¦              ¦         ¦
+''   Pin28/SCL ---------?------------------------?------------?--------------?------???------?--------------?---------+
+''
+''
+'' Instructions (brief):
+'' (1) - setup the propeller - see the Parallax Documentation (www.parallax.com/propeller)
+'' (2) - Use a 5mhz crystal on propeller X1 and X2
+'' (3) - Connect the SDA lines to Propeller Pin28, and SCL lines to Propeller Pin29
+''       See diagram above for resistor placements.
+''       Note that the DS1307 does not provide enough current to drive from the 5v section
+''       OPTIONAL: Connect the DS1307, DS1621, SRF08, MD22, and 24LC256 (EEPROM) devices
+''                  - the demo will work if they are not all present!   
+''       OPTIONAL: Connect LED's to MCP23016 pins G0.1,2 & 3, GP1.1,2 & 3
+'' (4) - OPTIONAL: Update the i2c Address's for the i2c if you are not using their base address's.
+'' (5) - Connect a terminal to the programming pins and use hypertrm or similar to see the results!
+'' (6) - Run the app!
+''
+''
+'' Support:
+''   I will support this on the Parallax propeller forum (username Javalin)
+''   send me a PM when you post in case I dont see it!
+     
+
+CON
+  _clkmode      = xtal1 + pll16x
+  _xinfreq      = 5_000_000
+  _stack        = 50
+    
+  i2cSCL        = 28
+'  i2cSDA        = 29 
+
+  MCP23016Addr  = %0100_0000  
+  DS1621Addr    = %1001_0000
+  EEPROMAddr    = %1010_0000  
+  DS1307Addr    = %1101_0000
+  SRF08Addr     = %1110_0010
+  md22Addr      = %1011_0000   ' (also the MD23 default address)
+  md23Addr      = %1011_0010 
+  SD21Addr      = %1100_0010
+
+  ' EEPROM data base address - i.e 32K (assumes a 64kb eeprom installed!!)
+  EEPROM_Base     = $8000
+  
+  ' debug - USE onboard pins
+  pcDebugRX       = 31
+  pcDebugTX       = 30
+
+  ' serial baud rates  
+  pcDebugBaud     = 115200    
+  
+VAR
+  long  i2cAddress, i2cSlaveCounter
+
+OBJ
+  i2cObject      : "basic_i2c_driver"
+  DS1621Object   : "DS1621Obj"
+  DS1307Object   : "DS1307Obj"
+  MCP23016Object : "MCP23016Object"
+  SRF08Object    : "SRF08Object"
+  SD21Object     : "SD21Object"  
+  MD22Object     : "MD22Object"
+  MD23Object     : "MD23Object"  
+
+  debug          : "Terminal"
+  strUtils       : "lib-StringUtils"
+  
+  
+pub Start
+    ' start the PC debug object
+'    debug.startx(pcDebugRX,pcDebugTX,pcDebugBaud)
+  
+    ' setup i2cobject
+    i2cObject.Initialize(i2cSCL)
+
+    ' pause 5 seconds
+    repeat 10
+        debug.str(string("."))
+        waitcnt((clkfreq/2)+cnt)
+    debug.str(string("\n"))
+  
+    ' i2c state
+    debug.str(string("I2C Demo (v2)!\n"))
+
+    'demo the i2c scan
+    i2cScan
+    waitcnt(clkfreq*2 +cnt)
+
+    repeat 
+
+        ' demo the MD22 Motor Controller
+        if i2cObject.devicePresent(i2cSCL,md22addr) == true
+            debug.str(string("MD22 Present\n"))
+            MD22_Demo
+        else
+            debug.str(string("MD22 Missing\n"))      
+        waitcnt(clkfreq*3+cnt)
+
+        ' demo the MD23 Motor Controller
+        if i2cObject.devicePresent(i2cSCL,md23addr) == true
+            debug.str(string("MD23 Present\n"))
+            MD23_Demo
+        else
+            debug.str(string("MD23 Missing\n"))      
+        waitcnt(clkfreq*3+cnt)
+        
+        ' demo the SD21 I/O expander
+        if i2cObject.devicePresent(i2cSCL,SD21Addr) == true
+            debug.str(string("SD21 Present\n"))
+            SD21_Demo
+        else
+            debug.str(string("SD21 Missing\n"))        
+        waitcnt(clkfreq*3+cnt)
+        
+        ' demo the EEPROM
+        if i2cObject.devicePresent(i2cSCL,eepromAddr) == true
+            debug.str(string("EEPROM Present"))
+            EEPROM_Demo
+        else
+            debug.str(string("EEPROM Missing"))    
+        waitcnt(clkfreq*3+cnt)    
+         
+        ' demo the SRF08 distance Sensor
+        if i2cObject.devicePresent(i2cSCL,srf08addr) == true
+            debug.str(string("SRF08 Present"))
+            SRF08_Demo
+        else
+            debug.str(string("SRF08 Missing"))    
+        waitcnt(clkfreq*3+cnt)    
+         
+        ' demo the MCP23016 I/O expander
+        if i2cObject.devicePresent(i2cSCL,MCP23016Addr) == true
+            debug.str(string("MCP23016 Present"))
+            MCP23016_Demo
+        else
+            debug.str(string("MCP23016 Missing"))        
+        waitcnt(clkfreq*3+cnt)
+         
+        ' demo the DS1307
+        if i2cObject.devicePresent(i2cSCL,DS1307Addr) == true
+            debug.str(string("DS1307 Present"))
+            DS1307_demo
+        else  
+          debug.str(string("DS1307 Missing"))    
+        waitcnt(clkfreq*3+cnt)  
+         
+        ' demo the DS1621
+        if i2cObject.devicePresent(i2cSCL,DS1621Addr) == true
+            debug.str(string("DS1621 Present"))    
+            DS1621_Demo
+        else  
+            debug.str(string("DS1621 Missing"))    
+        waitcnt(clkfreq*3+cnt)
+
+
+
+
+PRI MD23_Demo
+    ' demo the MD23 Motor Controller
+    debug.str(string("MD23 Demo..."))
+
+    debug.str(string("Module Version: "))    
+    debug.dec(md23Object.getsoftwareRev(i2cSCL,md23Addr))
+    debug.str(string("\n"))
+
+    debug.str(string("Module Voltage / current: "))    
+    debug.dec(md23Object.readVoltage(i2cSCL,md23Addr))
+    debug.str(string(","))
+    debug.dec(md23Object.readCurrent1(i2cSCL,md23Addr))    
+    debug.str(string(","))
+    debug.dec(md23Object.readcurrent2(i2cSCL,md23Addr))  
+    debug.str(string("\n"))
+
+    repeat 2
+
+        ' stop
+        debug.str(string("Stop")) 
+        md23Object.SetSpeed(i2cSCL,md23Addr,128,128)
+
+        ' wait a tick
+        waitcnt(clkfreq*2+cnt)
+    
+        ' run for a tick (50% speed)
+        debug.str(string("Fwd..."))                                   
+        md23Object.SetSpeed(i2cSCL,md23Addr,128-64,128-64)
+
+        ' wait a sec
+        waitcnt(clkfreq+cnt)
+
+        ' run for a tick (50% speed)
+        debug.str(string("Fwd..."))                                   
+        md23Object.SetSpeed(i2cSCL,md23Addr,128-64,128-64)
+
+        ' wait a sec
+        waitcnt(clkfreq+cnt)        
+
+        debug.str(string("Module Voltage / current: "))    
+        debug.dec(md23Object.readVoltage(i2cSCL,md23Addr))
+        debug.str(string(","))
+        debug.dec(md23Object.readCurrent1(i2cSCL,md23Addr))    
+        debug.str(string(","))
+        debug.dec(md23Object.readcurrent2(i2cSCL,md23Addr))         
+        debug.str(string("\n"))        
+        
+        ' (wait for the 2 second auto-stop time out)
+        waitcnt(clkfreq*4 + cnt)
+
+        ' read encoders
+        debug.str(string("Encoders="))
+        debug.dec(md23Object.readEncoder1(i2cSCL,md23addr))
+        debug.str(string(","))        
+        debug.dec(md23Object.readEncoder2(i2cSCL,md23addr))
+        debug.str(string("\n"))
+
+        ' wait a tick
+        waitcnt(clkfreq*2+cnt)                
+
+
+PRI SD21_Demo
+    ' demo the i2c SD21 Servo Controller
+    debug.str(string("SD21 Demo..."))
+
+    debug.str(string("Module Version: "))    
+    debug.dec(sd21Object.getsoftwareRev(i2cSCL,sd21Addr))
+    debug.str(string("\n"))
+
+    debug.str(string("Module Voltage: "))    
+    debug.dec(sd21Object.getModuleVoltage(i2cSCL,sd21Addr))
+    debug.str(string("\n"))
+
+    repeat 2
+
+        ' command servo 11 left
+        debug.str(string("Servo 11 left..."))        
+        sd21Object.commandservo(i2cSCL,sd21Addr,11,0,1000)
+
+        ' pause a tick
+        waitcnt(clkfreq+cnt)
+
+        ' command servo 11 right
+        debug.str(string("Servo 11 right..."))        
+        sd21Object.commandservo(i2cSCL,sd21Addr,11,0,2000)
+
+        ' pause a tick
+        waitcnt(clkfreq+cnt)
+
+        ' command servo 11 center
+        debug.str(string("Servo 11 center..."))        
+        sd21Object.commandservo(i2cSCL,sd21Addr,11,0,1500)
+
+        ' pause a tick
+        waitcnt(clkfreq+cnt)
+
+                           
+
+        
+
+PRI EEPROM_Demo | eepromData, eepromLocation, ackbit
+    ' demo the i2c Serial EEPROM (Microchip's 24LC512 (64kb))
+    debug.str(string("EEPROM DEMO"))
+      
+    ' ***** EEPROM read/Write example *****
+    eepromLocation := EEPROM_Base
+    eepromData := 0
+    
+    repeat 10
+        ' write long
+        eepromData += 100
+        i2cObject.WriteLong(i2cSCL, EEPROMAddr, eepromLocation, eepromData)
+
+        ' read long
+        eepromData :=0
+        eepromData := i2cObject.ReadLong(i2cSCL, EEPROMAddr, eepromLocation)                
+
+        ' debug
+        debug.str(string("Read Location="))
+        debug.str(strUtils.integerToD(eepromLocation,5))
+        debug.str(string(", data="))
+        debug.str(strUtils.integerToHexadecimal(eepromData,5))
+        debug.str(string("\n"))        
+        
+        ' next    
+        eepromLocation +=4
+
+        ' slowit
+        waitcnt(clkfreq/2 + cnt)
+
+    ' done
+    debug.str(string("EEPROM demo done."))        
+ 
+
+PRI MD22_Demo
+    ' demo the MD22 Motor Controller
+    ' MODE 0, forwards, backwards, turn and stopped
+    debug.str(string("MD22 DEMO  v"))
+    debug.dec(MD22Object.getSoftwareRev(i2cSCL,md22addr))
+    debug.str(string("\n"))        
+
+    ' slow forward    
+    debug.str(string("Forward"))
+    MD22Object.setSpeed(i2cSCL,md22addr,128-20,128-20)
+    ' wait 5 seconds
+    repeat 10
+        debug.str(string("."))
+        waitcnt(clkfreq/2+cnt)
+    MD22Object.setSpeed(i2cSCL,md22addr,128,128)
+    debug.str(string("\n"))    
+
+    ' wait two seconds
+    waitcnt(clkfreq*2+cnt) 
+
+    ' slow backward
+    debug.str(string("Backwards"))
+    MD22Object.setSpeed(i2cSCL,md22addr,128+20,128+20)
+    ' wait 5 seconds
+    repeat 10
+        debug.str(string("."))
+        waitcnt(clkfreq/2+cnt)      
+    MD22Object.setSpeed(i2cSCL,md22addr,128,128)
+    debug.str(string("\n"))    
+
+    ' wait two seconds    
+    waitcnt(clkfreq*2+cnt)
+                                        
+    ' slow turn
+    debug.str(string("Turn"))
+    MD22Object.setSpeed(i2cSCL,md22addr,128+20,128-20)
+    repeat 10
+        debug.str(string("."))
+        waitcnt(10_000_000+cnt)      
+    MD22Object.setSpeed(i2cSCL,md22addr,128,128)
+    debug.str(string("\n"))    
+
+    ' wait two seconds    
+    waitcnt(clkfreq*2+cnt)      
+
+    ' Stopped
+    debug.str(string("Stopped"))
+    MD22Object.setSpeed(i2cSCL,md22addr,128,128)
+    debug.str(string("\n"))    
+
+    waitcnt(clkfreq*3+cnt)
+
+    
+PRI SRF08_Demo | i2cdata
+    ' DEMO the SRF08 Ultrasonic Ranger
+    debug.str(string("SRF08 Demo"))
+
+    debug.str(string("Module version "))
+    debug.dec(SRF08Object.getSwVersion(i2cSCL,srf08addr))
+    debug.str(string(23))     
+        
+    repeat 5
+        debug.str(string("Distance is : "))
+          
+        ' initialize ranging on the SRF08
+        SRF08Object.initRanging(i2cSCL,srf08addr)
+    
+        ' wait a tick - must be at least 65ms
+        ' so at 80mhz - 80_000_000 / 1000 = 80_000 ticks per 1 ms
+        '               80_000     * 65   = 5_200_000 ticks for 65 ms
+        waitcnt(5_200_000 + cnt)
+         
+        ' display it
+        debug.dec(SRF08Object.getRange(i2cSCL,srf08Addr))
+        
+        debug.str(string("cm,  Light is: "))        
+        debug.dec(SRF08Object.getLight(i2cSCL,srf08addr))  
+         
+        ' wait two seconds
+        waitcnt(clkfreq*2+cnt)
+     
+
+PRI DS1307_demo | secs
+    ' DEMO the DS1307 Real Time Clock (RTC)
+    secs := ds1307object.gettime(i2cSCL,ds1307addr)
+    if secs == 80
+        ' the clock has not been initialised so lets set it
+        ' this will demonstrate hour & day roleover.
+        debug.str(string("set for role-over")) 
+        ds1307object.settime(i2cSCL,ds1307addr,23,59,45)     ' 23:59:45
+        ds1307object.setdate(i2cSCL,ds1307addr,1,31,12,07)   ' 31/12/2007 - day 1
+    else
+        debug.str(string("Already running!"))      
+     
+    ' run for approx 30 secs
+    repeat 30
+        ' get and display the TIME
+        debug.str(string("TIME: "))
+        ds1307object.gettime(i2cSCL,ds1307addr)
+        debug.dec (ds1307object.getHours)
+        debug.str(string(":"))
+        debug.dec (ds1307object.getMinutes)
+        debug.str(string(":"))                                       
+        debug.dec (ds1307object.getSeconds)
+     
+        ' get and display the DATE
+        debug.str(string("  DATE: "))
+        ds1307object.getdate(i2cSCL,ds1307addr)
+        debug.dec (ds1307object.getDays)
+        debug.str(string("/"))
+        debug.dec (ds1307object.getMonths)
+        debug.str(string("/"))                                       
+        debug.dec (ds1307object.getYears)
+        debug.str(string("!"))
+     
+        ' wait a second
+        waitcnt(clkfreq+cnt)
+   
+
+    
+PRI MCP23016_Demo | counter, mcpstate, ackbit
+    ' demo the MCP32016 i2c I/O Expander
+    debug.str(string("Init...."))
+    MCP23016Object.WriteIOregister0(i2cSCL,mcp23016addr,%0000_0000)
+    MCP23016Object.WriteIOregister1(i2cSCL,mcp23016addr,%0000_0000)
+     
+    waitcnt(clkfreq*2 + cnt)  
+     
+    repeat counter from 0 to 8
+        debug.str(string("Counting..."))
+        debug.dec(counter)      
+        MCP23016Object.writeGP0(i2cSCL,mcp23016addr,counter)
+        MCP23016Object.writeGP1(i2cSCL,mcp23016addr,8-counter)
+         
+        ' read GP0 state
+        mcpState := MCP23016Object.ReadGP0(i2cSCL,mcp23016addr)
+        debug.str(string("    GP0 State:  %"))
+        debug.bin(mcpState,8)
+         
+        ' read GP1 state    
+        mcpState := MCP23016Object.ReadGP1(i2cSCL,mcp23016addr)
+        debug.str(string("    GP1 State:  %"))
+        debug.bin(mcpState,8)
+        debug.str(string("%"))
+         
+        waitcnt(clkfreq*2+cnt)    
+     
+    repeat counter from 0 to 8
+        debug.str(string("Counting..."))
+        debug.dec(counter)
+             
+        case counter // 3
+            0 : ' case 0
+                debug.str(string("set GP0 High, GP1 Low")) 
+                MCP23016Object.WriteGP0(i2cSCL,mcp23016addr,%1111_1111)
+                MCP23016Object.WriteGP1(i2cSCL,mcp23016addr,%0000_0000)         
+            1: ' case 1
+                debug.str(string("set GP0 Low, GP1 High"))    
+                MCP23016Object.WriteGP0(i2cSCL,mcp23016addr,%0000_0000)        
+                MCP23016Object.WriteGP1(i2cSCL,mcp23016addr,%1111_1111)
+            2: ' case 2
+                debug.str(string("set GP0 Low, GP1 Low"))    
+                MCP23016Object.WriteGP0(i2cSCL,mcp23016addr,%0000_0000)
+                MCP23016Object.WriteGP1(i2cSCL,mcp23016addr,%0000_0000)         
+     
+        ' read GP0 and GP1 state
+        mcpState := MCP23016Object.ReadGP0(i2cSCL,mcp23016addr)
+        debug.str(string("GP0 State:  %"))
+        debug.bin(mcpState,8)
+         
+        mcpState := MCP23016Object.ReadGP1(i2cSCL,mcp23016addr)
+        debug.str(string("    GP1 State:  %"))
+        debug.bin(mcpState,8)
+        debug.str(string("\n"))    
+         
+        waitcnt(clkfreq*2 + cnt)    
+
+
+    
+PRI DS1621_Demo | tempvar,ackbit
+    ' DEMO DS1621 i2c Temperature sensor
+    debug.str(String("DS1621 Demo..."))
+
+    ' setup the config - one shot conversion mode
+    DS1621Object.writeConfig(i2cSCL,ds1621addr,ds1621object#_OneShotMode)
+
+    ' wait tick or two
+    waitcnt(clkfreq*2+cnt)
+
+    repeat 5
+        ' init temp conversion
+        DS1621Object.startConversion(i2cSCL,ds1621addr)
+         
+        ' wait a tick or two
+        waitcnt(clkfreq+cnt)
+         
+        ' read temp C
+        tempvar := DS1621Object.readTempC(i2cSCL,ds1621addr)
+
+        debug.str(string("Temp is "))
+        debug.dec (tempvar)
+         
+        ' read the Config register - it displays 65 - i.e. %0100_0001 - TH and data ready set
+        tempvar := DS1621Object.readConfig(i2cSCL,ds1621addr)
+        debug.str(string(",  ConfigReg  is  %"))
+        debug.bin (tempvar,8)
+        debug.str(string("\n"))
+         
+        ' wait several ticks
+        waitcnt(clkfreq*2+cnt)  
+              
+
+  
+PRI i2cScan | value, ackbit
+    ' Scan the I2C Bus and debug the LCD
+    debug.str(string("Scanning I2C Bus...."))
+     
+    ' initialize variables
+    i2cSlaveCounter := 0
+     
+    ' i2c Scan - scans all the address's on the bus
+    ' sends the address byte and listens for the device to ACK (hold the SDA low)
+    repeat i2cAddress from 0 to 127
+     
+        value :=  i2cAddress << 1 | 0
+        ackbit := i2cObject.devicePresent(i2cSCL,value)
+        
+        if ackbit==false
+            debug.str(string("NAK"))
+        else
+            ' show the scan 
+            debug.str(string("Scan Addr :  %"))    
+            debug.bin(value,8)
+            debug.str(string(",  ACK"))                  
+         
+            ' the device has set the ACK bit 
+            i2cSlaveCounter ++
+            waitcnt(clkfreq+cnt)
+ 
+            debug.str(string("\n"))
+         
+        ' slow the scan so we can read it.    
+        waitcnt(clkfreq/4 + cnt)
+
+    ' update the counter
+    debug.str(string("i2cScan found "))
+    debug.dec(i2cSlaveCounter)
+    debug.str(string(" devices!"))
+    
+        

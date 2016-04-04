@@ -1,0 +1,85 @@
+'' MCP3422/3/4 I2C 18 bit ADC driver v1.0
+'' Written by Fl?vio Stutz @ StutzLab 2014
+
+CON
+  _clkmode = xtal1 + pll16x
+  _xinfreq = 5_000_000
+
+  i2cSwitchAddrRead = %1110_0001  
+  i2cSwitchAddrWrite = %1110_0000  
+
+VAR
+  long voltage
+  byte test1[32]
+   
+OBJ
+  adc : "StutzMCP3424Driver"
+  vp   : "Terminal"          'transfers data to/from PC  
+  i2c : "BasicI2CDriver"
+  su : "StringUtils"
+     
+PUB main | ack
+  vp.share(@voltage, @test1)
+
+  vp.str(string("i2c bus switch to port 1\n"))
+  ack := i2c.writeValue(28, i2cSwitchAddrWrite, %0000_0001)
+  if ack == ACK
+    vp.str(string("bus switch accepted command\n"))
+      
+  if (i2c.devicePresent(28,%1101_0001) == true)
+    vp.str(string("Found an extension connected to port 1\n"))
+
+  waitcnt(10000000 + cnt)
+  vp.str(string("Initializing adc...\n"))
+  adc.initialize(28, %1101_0000)
+    
+  waitcnt(10000000 + cnt)
+  vp.str(string("Sampling voltage on channel 1 18bits...\n"))
+  adc.startSamplingVoltageOnDevice(adc#CHANNEL_1, adc#PRECISION_14BITS, adc#GAIN_X1)
+
+  waitcnt(10000000 + cnt)
+  repeat 2
+    voltage := adc.readVoltage   
+    vp.str(su.integerToDecimal(voltage, 24))
+'    vp.str(string("#"))
+'    vp.str(su.integerToBinary(voltage, 24))
+    vp.str(string("\n"))
+    waitcnt(50000000 + cnt)
+
+  waitcnt(10000000 + cnt)
+
+  vp.str(string("Sampling voltage on channel 2...\n"))
+  adc.startSamplingVoltageOnDevice(adc#CHANNEL_2, adc#PRECISION_14BITS, adc#GAIN_X1)
+
+  waitcnt(10000000 + cnt)
+  repeat 300
+    voltage := adc.readVoltage   
+    vp.str(su.integerToDecimal(voltage, 24))
+'    vp.str(string("#"))
+'    vp.str(su.integerToBinary(voltage, 24))
+    vp.str(string("\n"))
+    waitcnt(1000000 + cnt)
+
+
+  waitcnt(100000000 + cnt)
+  vp.str(string("Sampling voltage on channel 3...\n"))
+  adc.startSamplingVoltageOnDevice(adc#CHANNEL_3, adc#PRECISION_18BITS, adc#GAIN_X1)
+
+  waitcnt(10000000 + cnt)
+  repeat 300
+    voltage := adc.readVoltage   
+    vp.str(su.integerToDecimal(voltage, 24))
+    vp.str(string("\n"))
+    waitcnt(5000000 + cnt)
+
+
+  waitcnt(100000000 + cnt)
+  vp.str(string("Sampling voltage on channel 4...\n"))
+  adc.startSamplingVoltageOnDevice(adc#CHANNEL_4, adc#PRECISION_18BITS, adc#GAIN_X1)
+
+  waitcnt(100000000 + cnt)
+  repeat 30
+    voltage := adc.readVoltage   
+    vp.str(su.integerToDecimal(voltage, 24))
+    vp.str(string("\n"))
+    waitcnt(5000000 + cnt)
