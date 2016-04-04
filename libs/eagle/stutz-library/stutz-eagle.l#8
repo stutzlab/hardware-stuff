@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -133,11 +133,11 @@
 <smd name="P$7" x="2.2" y="0.35" dx="1.35" dy="0.4" layer="1"/>
 <smd name="P$6" x="2.2" y="-0.3" dx="1.35" dy="0.4" layer="1"/>
 <smd name="P$5" x="2.2" y="-0.95" dx="1.35" dy="0.4" layer="1"/>
-<wire x1="-1.524" y1="1.524" x2="1.524" y2="1.524" width="0.0508" layer="21"/>
-<wire x1="1.524" y1="1.524" x2="1.524" y2="-1.524" width="0.0508" layer="21"/>
-<wire x1="1.524" y1="-1.524" x2="-1.524" y2="-1.524" width="0.0508" layer="21"/>
-<wire x1="-1.524" y1="-1.524" x2="-1.524" y2="1.524" width="0.0508" layer="21"/>
-<circle x="-1" y="1" radius="0.22360625" width="0.05" layer="21"/>
+<wire x1="-1.324" y1="1.524" x2="1.324" y2="1.524" width="0.0508" layer="21"/>
+<wire x1="1.324" y1="1.524" x2="1.324" y2="-1.524" width="0.0508" layer="21"/>
+<wire x1="1.324" y1="-1.524" x2="-1.324" y2="-1.524" width="0.0508" layer="21"/>
+<wire x1="-1.324" y1="-1.524" x2="-1.324" y2="1.524" width="0.0508" layer="21"/>
+<circle x="-0.9" y="1.1" radius="0.22360625" width="0.05" layer="21"/>
 <text x="-2.54" y="-3.048" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="-2.413" y="1.778" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 </package>
@@ -145,8 +145,8 @@
 <pad name="P$3" x="-1.3" y="-0.5" drill="0.8636" diameter="1.4478" shape="octagon"/>
 <pad name="P$1" x="1.3" y="-0.5" drill="0.8636" diameter="1.4478" shape="octagon"/>
 <pad name="P$2" x="0" y="0.77" drill="0.8636" diameter="1.4478" shape="octagon"/>
-<text x="-2.413" y="1.778" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-3.175" y="-2.667" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<text x="-2.413" y="1.878" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-3.175" y="-2.867" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 </package>
 <package name="PDIP-8PIN">
 <wire x1="-5.08" y1="2.54" x2="5.08" y2="2.54" width="0.2032" layer="21"/>
@@ -411,8 +411,8 @@
 <wire x1="0.635" y1="0" x2="0.635" y2="-0.762" width="0.1524" layer="21"/>
 <wire x1="-0.635" y1="0.762" x2="-0.635" y2="0" width="0.1524" layer="21"/>
 <wire x1="-0.635" y1="0" x2="-0.635" y2="-0.762" width="0.1524" layer="21"/>
-<wire x1="0.635" y1="0" x2="1.27" y2="0" width="0.1524" layer="21"/>
-<wire x1="-0.635" y1="0" x2="-1.27" y2="0" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="0" x2="1.27" y2="0" width="0.1524" layer="51"/>
+<wire x1="-0.635" y1="0" x2="-1.27" y2="0" width="0.1524" layer="51"/>
 <wire x1="-3.048" y1="2.159" x2="-3.048" y2="-2.159" width="0.4064" layer="21" curve="180"/>
 <wire x1="3.048" y1="-2.159" x2="3.048" y2="2.159" width="0.4064" layer="21" curve="180"/>
 <wire x1="-3.048" y1="1.651" x2="-3.048" y2="-1.651" width="0.1524" layer="21" curve="180"/>
@@ -837,18 +837,18 @@
 <smd name="10" x="0.254" y="-1.905" dx="0.6" dy="0.3" layer="1" roundness="25" rot="R90"/>
 <smd name="11" x="0.762" y="-1.905" dx="0.6" dy="0.3" layer="1" roundness="25" rot="R90"/>
 <smd name="12" x="1.27" y="-1.905" dx="0.6" dy="0.3" layer="1" roundness="25" rot="R90"/>
-<smd name="13" x="1.905" y="-1.27" dx="0.6" dy="0.3" layer="1" roundness="25" rot="R180"/>
-<smd name="14" x="1.905" y="-0.762" dx="0.6" dy="0.3" layer="1" roundness="25" rot="R180"/>
-<smd name="15" x="1.905" y="-0.254" dx="0.6" dy="0.3" layer="1" roundness="25" rot="R180"/>
-<smd name="16" x="1.905" y="0.254" dx="0.6" dy="0.3" layer="1" roundness="25" rot="R180"/>
-<smd name="17" x="1.905" y="0.762" dx="0.6" dy="0.3" layer="1" roundness="25" rot="R180"/>
-<smd name="18" x="1.905" y="1.27" dx="0.6" dy="0.3" layer="1" roundness="25" rot="R180"/>
-<smd name="19" x="1.27" y="1.905" dx="0.6" dy="0.3" layer="1" roundness="25" rot="R270"/>
-<smd name="20" x="0.762" y="1.905" dx="0.6" dy="0.3" layer="1" roundness="25" rot="R270"/>
-<smd name="21" x="0.254" y="1.905" dx="0.6" dy="0.3" layer="1" roundness="25" rot="R270"/>
-<smd name="22" x="-0.254" y="1.905" dx="0.6" dy="0.3" layer="1" roundness="25" rot="R270"/>
-<smd name="23" x="-0.762" y="1.905" dx="0.6" dy="0.3" layer="1" roundness="25" rot="R270"/>
-<smd name="24" x="-1.27" y="1.905" dx="0.6" dy="0.3" layer="1" roundness="25" rot="R270"/>
+<smd name="13" x="1.9812" y="-1.27" dx="0.6604" dy="0.3" layer="1" roundness="25" rot="R180"/>
+<smd name="14" x="1.9812" y="-0.762" dx="0.6604" dy="0.3" layer="1" roundness="25" rot="R180"/>
+<smd name="15" x="1.9812" y="-0.254" dx="0.6604" dy="0.3" layer="1" roundness="25" rot="R180"/>
+<smd name="16" x="1.9812" y="0.254" dx="0.6604" dy="0.3" layer="1" roundness="25" rot="R180"/>
+<smd name="17" x="1.9812" y="0.762" dx="0.6604" dy="0.3" layer="1" roundness="25" rot="R180"/>
+<smd name="18" x="1.9812" y="1.27" dx="0.6604" dy="0.3" layer="1" roundness="25" rot="R180"/>
+<smd name="19" x="1.27" y="1.9812" dx="0.6604" dy="0.3" layer="1" roundness="25" rot="R270"/>
+<smd name="20" x="0.762" y="1.9812" dx="0.6604" dy="0.3" layer="1" roundness="25" rot="R270"/>
+<smd name="21" x="0.254" y="1.9812" dx="0.6604" dy="0.3" layer="1" roundness="25" rot="R270"/>
+<smd name="22" x="-0.254" y="1.9812" dx="0.6604" dy="0.3" layer="1" roundness="25" rot="R270"/>
+<smd name="23" x="-0.762" y="1.9812" dx="0.6604" dy="0.3" layer="1" roundness="25" rot="R270"/>
+<smd name="24" x="-1.27" y="1.9812" dx="0.6604" dy="0.3" layer="1" roundness="25" rot="R270"/>
 <smd name="EXP" x="0" y="0" dx="2.9" dy="2.9" layer="1" roundness="25"/>
 <text x="-2.286" y="2.54" size="1.27" layer="25">&gt;NAME</text>
 <text x="-2.032" y="-3.81" size="1.27" layer="27">&gt;VALUE</text>
@@ -1144,14 +1144,14 @@
 <pad name="P2B" x="11" y="0" drill="1.5" diameter="3" shape="octagon"/>
 <wire x1="-5" y1="2.5" x2="5" y2="2.5" width="0.127" layer="21"/>
 <wire x1="5" y1="2.5" x2="10" y2="2.5" width="0.127" layer="51"/>
-<wire x1="10" y1="2.5" x2="10" y2="-2.5" width="0.127" layer="21"/>
+<wire x1="10" y1="2.5" x2="10" y2="-2.5" width="0.127" layer="51"/>
 <wire x1="10" y1="-2.5" x2="5" y2="-2.5" width="0.127" layer="51"/>
 <wire x1="5" y1="-2.5" x2="-5" y2="-2.5" width="0.127" layer="21"/>
 <wire x1="-5" y1="-2.5" x2="-10" y2="-2.5" width="0.127" layer="51"/>
-<wire x1="-10" y1="-2.5" x2="-10" y2="2.5" width="0.127" layer="21"/>
+<wire x1="-10" y1="-2.5" x2="-10" y2="2.5" width="0.127" layer="51"/>
 <wire x1="-10" y1="2.5" x2="-5" y2="2.5" width="0.127" layer="51"/>
-<wire x1="-5" y1="2.5" x2="-5" y2="-2.5" width="0.127" layer="21"/>
-<wire x1="5" y1="2.5" x2="5" y2="-2.5" width="0.127" layer="21"/>
+<wire x1="-5" y1="2.5" x2="-5" y2="-2.5" width="0.127" layer="51"/>
+<wire x1="5" y1="2.5" x2="5" y2="-2.5" width="0.127" layer="51"/>
 </package>
 <package name="SOIC8">
 <wire x1="2.4" y1="1.75" x2="2.4" y2="-1.75" width="0.2032" layer="21"/>
@@ -1557,8 +1557,8 @@
 <smd name="D2" x="18.2" y="-4.7" dx="1" dy="0.3" layer="1"/>
 <smd name="NC2" x="18.2" y="-5.2" dx="1" dy="0.3" layer="1"/>
 <smd name="NC3" x="18.2" y="-5.7" dx="1" dy="0.3" layer="1"/>
-<text x="-1.397" y="5.08" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-1.651" y="-6.223" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<text x="-2.197" y="4.28" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-2.251" y="-5.323" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 </package>
 <package name="PIN-HEADER-12PIN">
 <wire x1="-6.985" y1="1.27" x2="-5.715" y2="1.27" width="0.2032" layer="21"/>
