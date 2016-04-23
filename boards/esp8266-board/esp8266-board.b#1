@@ -546,7 +546,7 @@ design rules under a new name.
 <element name="C4" library="capacitor-wima" package="C2.5-2" value="470uF" x="20.704" y="7.3315" smashed="yes">
 <attribute name="MPN" value="FK18X5R0J106M" x="20.704" y="7.3315" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="21.353" y="8.8555" size="0.8128" layer="25" ratio="10"/>
-<attribute name="VALUE" x="19.653" y="4.8375" size="0.8128" layer="27" ratio="10"/>
+<attribute name="VALUE" x="20.353" y="5.0375" size="0.8128" layer="27" ratio="10"/>
 </element>
 <element name="FIRMWARE" library="stutz-eagle" package="PIN-HEADER-2PIN" value="FIRMWARE" x="22.1025" y="29.8725" smashed="yes" rot="R270">
 <attribute name="VALUE" x="23.5355" y="33.6825" size="1.016" layer="27" ratio="10" rot="R270"/>
@@ -578,7 +578,7 @@ design rules under a new name.
 </element>
 <element name="C2" library="capacitor-wima" package="C2.5-2" value="10uF" x="22.1475" y="23.904" smashed="yes" rot="R90">
 <attribute name="NAME" x="20.6235" y="23.153" size="0.8128" layer="25" ratio="10" rot="R90"/>
-<attribute name="VALUE" x="23.547" y="21.1415" size="0.8128" layer="27" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="24.3415" y="22.553" size="0.8128" layer="27" ratio="10" rot="R90"/>
 </element>
 <element name="C5" library="capacitor-wima" package="C2.5-2" value="10uF" x="19.4945" y="3.139" smashed="yes">
 <attribute name="NAME" x="17.2435" y="4.663" size="0.8128" layer="25" ratio="10"/>
@@ -586,7 +586,7 @@ design rules under a new name.
 </element>
 <element name="T2" library="stutz-eagle" package="TO-220" value="LM7805" x="13.23" y="14.9825" smashed="yes" rot="R90">
 <attribute name="MPN" value="LM2937ET-3.3" x="3.324" y="6.0925" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="18.392" y="10.3295" size="0.8128" layer="25" ratio="10" rot="R90"/>
+<attribute name="NAME" x="21.392" y="9.9295" size="0.8128" layer="25" ratio="10" rot="R90"/>
 <attribute name="VALUE" x="16.11" y="11.1045" size="0.8128" layer="27" ratio="10" rot="R180"/>
 </element>
 <element name="C6" library="capacitor-wima" package="C2.5-2" value="0.22uF" x="3.1055" y="7.1945" smashed="yes" rot="R90">
