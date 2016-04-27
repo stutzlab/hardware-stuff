@@ -2111,7 +2111,7 @@ DIN A4, landscape with location and doc. field</description>
 <part name="U$2" library="stutz-eagle" deviceset="+5V" device=""/>
 <part name="U$3" library="stutz-eagle" deviceset="+24V" device=""/>
 <part name="SUPPLY11" library="stutz-eagle" deviceset="+3.3V" device=""/>
-<part name="R1" library="stutz-eagle" deviceset="RESISTOR" device="V3" value="3k3"/>
+<part name="R1" library="stutz-eagle" deviceset="RESISTOR" device="V2" value="3k3"/>
 </parts>
 <sheets>
 <sheet>
