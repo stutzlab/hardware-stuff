@@ -9763,7 +9763,7 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <part name="R6" library="stutz-eagle" deviceset="RESISTOR" device="V1" value="10k"/>
 <part name="R7" library="stutz-eagle" deviceset="RESISTOR" device="V1" value="10k"/>
 <part name="R8" library="stutz-eagle" deviceset="RESISTOR" device="V1" value="10k"/>
-<part name="W1" library="stutz-eagle" deviceset="TPS382X" device="" value="TPS3823"/>
+<part name="W1" library="stutz-eagle" deviceset="TPS382X" device="" value="TPS3823-33"/>
 <part name="SUPPLY11" library="stutz-eagle" deviceset="+3.3V" device=""/>
 <part name="SUPPLY15" library="supply2" deviceset="GND" device=""/>
 <part name="SD1" library="stutz-eagle" deviceset="PIN-HEADER-7PIN" device="" value="CS  SI GND 3.3V SCK GND SO"/>

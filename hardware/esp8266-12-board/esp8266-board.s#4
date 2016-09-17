@@ -9724,7 +9724,7 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <part name="POWER" library="stutz-eagle" deviceset="PIN-HEADER-3PIN" device="" value="GND +5V &lt;35V"/>
 <part name="SUPPLY1" library="stutz-eagle" deviceset="+5V" device=""/>
 <part name="SUPPLY2" library="supply2" deviceset="GND" device=""/>
-<part name="FIRMWARE" library="stutz-eagle" deviceset="PIN-HEADER-3PIN" device="" value="FIRMWARE"/>
+<part name="FIRMWARE" library="stutz-eagle" deviceset="PIN-HEADER-3PIN" device="" value="GND DTR RTS"/>
 <part name="SUPPLY7" library="supply2" deviceset="GND" device=""/>
 <part name="OUTPUT" library="stutz-eagle" deviceset="PIN-HEADER-6PIN" device="" value="GND GND 3.3V 5V  RX  TX"/>
 <part name="SUPPLY8" library="supply2" deviceset="GND" device=""/>

@@ -9706,6 +9706,8 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 </class>
 <class number="3" name="power-2A" width="1.143" drill="0">
 </class>
+<class number="4" name="power-1.7A" width="0.8" drill="0">
+</class>
 </classes>
 <parts>
 <part name="T1" library="stutz-eagle" deviceset="AMS1117" device="" value="AMS1117">
@@ -9851,7 +9853,7 @@ OPTIONAL FOR 8-35V INPUTS</text>
 <busses>
 </busses>
 <nets>
-<net name="GND" class="3">
+<net name="GND" class="4">
 <segment>
 <pinref part="T1" gate="G$1" pin="GND"/>
 <pinref part="SUPPLY17" gate="GND" pin="GND"/>
@@ -10017,7 +10019,7 @@ OPTIONAL FOR 8-35V INPUTS</text>
 <junction x="127" y="58.42"/>
 </segment>
 </net>
-<net name="+5V" class="3">
+<net name="+5V" class="4">
 <segment>
 <wire x1="15.24" y1="153.67" x2="15.24" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="T1" gate="G$1" pin="IN"/>
@@ -10109,7 +10111,7 @@ OPTIONAL FOR 8-35V INPUTS</text>
 <label x="48.26" y="27.94" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="+24V" class="3">
+<net name="+24V" class="4">
 <segment>
 <wire x1="127" y1="153.67" x2="127" y2="152.4" width="0.1524" layer="91"/>
 <pinref part="T2" gate="G$1" pin="IN"/>

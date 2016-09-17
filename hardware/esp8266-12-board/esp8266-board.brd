@@ -1776,7 +1776,7 @@ design rules under a new name.
 <attribute name="NAME" x="31.676" y="27.1092" size="0.8128" layer="25" ratio="10" rot="R90"/>
 <attribute name="VALUE" x="34.6892" y="26.9092" size="0.8128" layer="27" ratio="10" rot="R90"/>
 </element>
-<element name="W1" library="stutz-eagle" package="SOT23-5/TSOT25" value="TPS3823" x="11" y="25.2" rot="MR0"/>
+<element name="W1" library="stutz-eagle" package="SOT23-5/TSOT25" value="TPS3823-33" x="11" y="25.2" rot="MR0"/>
 <element name="SD1" library="stutz-eagle" package="PIN-HEADER-7PIN" value="CS  SI GND 3.3V SCK GND SO" x="1.7" y="18.9" smashed="yes" rot="R270">
 <attribute name="VALUE" x="4.333" y="27.99" size="0.9" layer="27" ratio="10" rot="R270"/>
 </element>

@@ -9939,7 +9939,7 @@ OPTIONAL FOR 8-35V INPUTS</text>
 <wire x1="142.24" y1="38.1" x2="142.24" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="+3.3V" class="3">
+<net name="+3.3V" class="4">
 <segment>
 <pinref part="SUPPLY16" gate="G$1" pin="+3.3V"/>
 <pinref part="C4" gate="G$1" pin="1"/>
@@ -10214,6 +10214,12 @@ OPTIONAL FOR 8-35V INPUTS</text>
 <approved hash="104,1,21.59,149.86,T1,IN,+5V,,,"/>
 <approved hash="104,1,153.67,149.86,T2,OUT,+5V,,,"/>
 <approved hash="104,1,133.35,149.86,T2,IN,+24V,,,"/>
+<approved hash="202,1,66.04,96.52,E1,GPIO4,,,,"/>
+<approved hash="202,1,35.56,88.9,E1,GPIO13,,,,"/>
+<approved hash="202,1,35.56,91.44,E1,GPIO12,,,,"/>
+<approved hash="202,1,35.56,93.98,E1,GPIO14,,,,"/>
+<approved hash="202,1,35.56,96.52,E1,GPIO16,,,,"/>
+<approved hash="202,1,35.56,101.6,E1,ADC,,,,"/>
 <approved hash="113,1,130.071,89.431,FRAME1,,,,,"/>
 </errors>
 </schematic>
