@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.2.0">
+<eagle version="7.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -9715,10 +9715,8 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 </part>
 <part name="SUPPLY16" library="stutz-eagle" deviceset="+3.3V" device=""/>
 <part name="SUPPLY17" library="supply2" deviceset="GND" device=""/>
-<part name="C3" library="capacitor-wima" deviceset="C" device="2.5/2" value="470uF">
-<attribute name="MPN" value="1C10Z5U104M050B"/>
-</part>
-<part name="C4" library="capacitor-wima" deviceset="C" device="2.5/2" value="470uF">
+<part name="C3" library="rcl" deviceset="CPOL-EU" device="E2,5-6E" value="470uF"/>
+<part name="C4" library="rcl" deviceset="CPOL-EU" device="E2,5-6E" value="470uF">
 <attribute name="MPN" value="FK18X5R0J106M"/>
 </part>
 <part name="FRAME1" library="frames" deviceset="A4L-LOC" device=""/>
@@ -9763,7 +9761,7 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <part name="R6" library="stutz-eagle" deviceset="RESISTOR" device="V1" value="10k"/>
 <part name="R7" library="stutz-eagle" deviceset="RESISTOR" device="V1" value="10k"/>
 <part name="R8" library="stutz-eagle" deviceset="RESISTOR" device="V1" value="10k"/>
-<part name="W1" library="stutz-eagle" deviceset="TPS382X" device="" value="TPS3823"/>
+<part name="W1" library="stutz-eagle" deviceset="TPS382X" device="" value="TPS3823-33"/>
 <part name="SUPPLY11" library="stutz-eagle" deviceset="+3.3V" device=""/>
 <part name="SUPPLY15" library="supply2" deviceset="GND" device=""/>
 <part name="SD1" library="stutz-eagle" deviceset="PIN-HEADER-7PIN" device="" value="CS  SI GND 3.3V SCK GND SO"/>
@@ -9790,9 +9788,7 @@ OPTIONAL FOR 8-35V INPUTS</text>
 </instance>
 <instance part="SUPPLY16" gate="G$1" x="48.26" y="156.21"/>
 <instance part="SUPPLY17" gate="GND" x="31.75" y="134.62"/>
-<instance part="C3" gate="G$1" x="15.24" y="144.78">
-<attribute name="MPN" x="15.24" y="144.78" size="1.778" layer="96" display="off"/>
-</instance>
+<instance part="C3" gate="G$1" x="15.24" y="144.78"/>
 <instance part="C4" gate="G$1" x="48.26" y="144.78">
 <attribute name="MPN" x="48.26" y="144.78" size="1.778" layer="96" display="off"/>
 </instance>
@@ -9840,7 +9836,7 @@ OPTIONAL FOR 8-35V INPUTS</text>
 <instance part="R1" gate="G$1" x="25.4" y="104.14"/>
 <instance part="R4" gate="G$1" x="20.32" y="99.06"/>
 <instance part="C9" gate="G$1" x="58.42" y="68.58" rot="R90"/>
-<instance part="SUPPLY4" gate="GND" x="162.56" y="88.9"/>
+<instance part="SUPPLY4" gate="GND" x="162.56" y="86.36"/>
 <instance part="SUPPLY6" gate="G$1" x="185.42" y="116.84"/>
 <instance part="R6" gate="G$1" x="172.72" y="104.14"/>
 <instance part="R7" gate="G$1" x="177.8" y="91.44"/>
@@ -9860,9 +9856,9 @@ OPTIONAL FOR 8-35V INPUTS</text>
 <wire x1="31.75" y1="140.97" x2="31.75" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="31.75" y1="139.7" x2="31.75" y2="137.16" width="0.1524" layer="91"/>
 <junction x="31.75" y="139.7"/>
-<pinref part="C3" gate="G$1" pin="2"/>
+<pinref part="C3" gate="G$1" pin="-"/>
 <wire x1="15.24" y1="139.7" x2="31.75" y2="139.7" width="0.1524" layer="91"/>
-<pinref part="C4" gate="G$1" pin="2"/>
+<pinref part="C4" gate="G$1" pin="-"/>
 <wire x1="31.75" y1="139.7" x2="48.26" y2="139.7" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="2"/>
 <wire x1="15.24" y1="139.7" x2="7.62" y2="139.7" width="0.1524" layer="91"/>
@@ -9926,7 +9922,7 @@ OPTIONAL FOR 8-35V INPUTS</text>
 <label x="144.78" y="101.6" size="1.778" layer="95"/>
 <pinref part="SUPPLY4" gate="GND" pin="GND"/>
 <wire x1="162.56" y1="101.6" x2="162.56" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="162.56" y1="93.98" x2="162.56" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="93.98" x2="162.56" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="142.24" y1="93.98" x2="162.56" y2="93.98" width="0.1524" layer="91"/>
 <label x="144.78" y="93.98" size="1.778" layer="95"/>
 <junction x="162.56" y="93.98"/>
@@ -9942,7 +9938,7 @@ OPTIONAL FOR 8-35V INPUTS</text>
 <net name="+3.3V" class="4">
 <segment>
 <pinref part="SUPPLY16" gate="G$1" pin="+3.3V"/>
-<pinref part="C4" gate="G$1" pin="1"/>
+<pinref part="C4" gate="G$1" pin="+"/>
 <wire x1="48.26" y1="153.67" x2="48.26" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="T1" gate="G$1" pin="OUT"/>
 <wire x1="48.26" y1="149.86" x2="48.26" y2="147.32" width="0.1524" layer="91"/>
@@ -10024,7 +10020,7 @@ OPTIONAL FOR 8-35V INPUTS</text>
 <wire x1="15.24" y1="153.67" x2="15.24" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="T1" gate="G$1" pin="IN"/>
 <wire x1="15.24" y1="149.86" x2="21.59" y2="149.86" width="0.1524" layer="91"/>
-<pinref part="C3" gate="G$1" pin="1"/>
+<pinref part="C3" gate="G$1" pin="+"/>
 <wire x1="15.24" y1="147.32" x2="15.24" y2="149.86" width="0.1524" layer="91"/>
 <junction x="15.24" y="149.86"/>
 <pinref part="SUPPLY3" gate="G$1" pin="+5V"/>
@@ -10215,11 +10211,14 @@ OPTIONAL FOR 8-35V INPUTS</text>
 <approved hash="104,1,153.67,149.86,T2,OUT,+5V,,,"/>
 <approved hash="104,1,133.35,149.86,T2,IN,+24V,,,"/>
 <approved hash="202,1,66.04,96.52,E1,GPIO4,,,,"/>
+<approved hash="204,1,66.04,99.06,E1,GPIO5,,,,"/>
+<approved hash="104,1,66.04,101.6,E1,RXD0,ESP_RX,,,"/>
 <approved hash="202,1,35.56,88.9,E1,GPIO13,,,,"/>
 <approved hash="202,1,35.56,91.44,E1,GPIO12,,,,"/>
 <approved hash="202,1,35.56,93.98,E1,GPIO14,,,,"/>
 <approved hash="202,1,35.56,96.52,E1,GPIO16,,,,"/>
 <approved hash="202,1,35.56,101.6,E1,ADC,,,,"/>
+<approved hash="104,1,129.54,58.42,W1,VDD,+3.3V,,,"/>
 <approved hash="113,1,130.071,89.431,FRAME1,,,,,"/>
 </errors>
 </schematic>

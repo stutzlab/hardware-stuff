@@ -9706,6 +9706,8 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 </class>
 <class number="3" name="power-2A" width="1.143" drill="0">
 </class>
+<class number="4" name="power-1.7A" width="0.8" drill="0">
+</class>
 </classes>
 <parts>
 <part name="T1" library="stutz-eagle" deviceset="AMS1117" device="" value="AMS1117">
@@ -9724,9 +9726,9 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <part name="POWER" library="stutz-eagle" deviceset="PIN-HEADER-3PIN" device="" value="GND +5V &lt;35V"/>
 <part name="SUPPLY1" library="stutz-eagle" deviceset="+5V" device=""/>
 <part name="SUPPLY2" library="supply2" deviceset="GND" device=""/>
-<part name="FIRMWARE" library="stutz-eagle" deviceset="PIN-HEADER-3PIN" device="" value="FIRMWARE"/>
+<part name="FIRMWARE" library="stutz-eagle" deviceset="PIN-HEADER-3PIN" device="" value="GND DTR RTS"/>
 <part name="SUPPLY7" library="supply2" deviceset="GND" device=""/>
-<part name="OUTPUT" library="stutz-eagle" deviceset="PIN-HEADER-6PIN" device="" value="GND GND 3.3V 5V RX TX"/>
+<part name="OUTPUT" library="stutz-eagle" deviceset="PIN-HEADER-6PIN" device="" value="GND GND 3.3V 5V  RX  TX"/>
 <part name="SUPPLY8" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY9" library="stutz-eagle" deviceset="+5V" device=""/>
 <part name="SUPPLY10" library="stutz-eagle" deviceset="+3.3V" device=""/>
@@ -9851,7 +9853,7 @@ OPTIONAL FOR 8-35V INPUTS</text>
 <busses>
 </busses>
 <nets>
-<net name="GND" class="3">
+<net name="GND" class="4">
 <segment>
 <pinref part="T1" gate="G$1" pin="GND"/>
 <pinref part="SUPPLY17" gate="GND" pin="GND"/>
@@ -10017,7 +10019,7 @@ OPTIONAL FOR 8-35V INPUTS</text>
 <junction x="127" y="58.42"/>
 </segment>
 </net>
-<net name="+5V" class="3">
+<net name="+5V" class="4">
 <segment>
 <wire x1="15.24" y1="153.67" x2="15.24" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="T1" gate="G$1" pin="IN"/>
@@ -10109,7 +10111,7 @@ OPTIONAL FOR 8-35V INPUTS</text>
 <label x="48.26" y="27.94" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="+24V" class="3">
+<net name="+24V" class="4">
 <segment>
 <wire x1="127" y1="153.67" x2="127" y2="152.4" width="0.1524" layer="91"/>
 <pinref part="T2" gate="G$1" pin="IN"/>

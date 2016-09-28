@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.2.0">
+<eagle version="7.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -229,28 +229,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <text x="-6.35" y="1.651" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-6.35" y="-2.667" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 </package>
-<package name="TO-220">
-<pad name="INPUT" x="-2.54" y="-8.89" drill="0.8" shape="long" rot="R90"/>
-<pad name="GND" x="0" y="-8.89" drill="0.8" shape="long" rot="R90"/>
-<pad name="OUTPUT" x="2.54" y="-8.89" drill="0.8" shape="long" rot="R90"/>
-<wire x1="-5.08" y1="-4.064" x2="-5.08" y2="3.81" width="0.127" layer="51"/>
-<wire x1="-5.08" y1="3.81" x2="-5.08" y2="4.572" width="0.127" layer="51"/>
-<wire x1="-5.08" y1="4.572" x2="5.08" y2="4.572" width="0.127" layer="51"/>
-<wire x1="5.08" y1="4.572" x2="5.08" y2="3.81" width="0.127" layer="51"/>
-<wire x1="5.08" y1="3.81" x2="5.08" y2="-4.064" width="0.127" layer="51"/>
-<wire x1="5.08" y1="-4.064" x2="-5.08" y2="-4.064" width="0.127" layer="51"/>
-<wire x1="-5.08" y1="3.81" x2="5.08" y2="3.81" width="0.127" layer="51"/>
-<wire x1="-5.08" y1="4.572" x2="-5.08" y2="10.922" width="0.127" layer="51"/>
-<wire x1="-5.08" y1="10.922" x2="5.08" y2="10.922" width="0.127" layer="51"/>
-<wire x1="5.08" y1="10.922" x2="5.08" y2="4.572" width="0.127" layer="51"/>
-<circle x="0" y="8.128" radius="1.8923" width="0.127" layer="51"/>
-<rectangle x1="-3.048" y1="-7.42" x2="-2.032" y2="-4" layer="21"/>
-<rectangle x1="-0.508" y1="-7.42" x2="0.508" y2="-4" layer="21"/>
-<rectangle x1="2.032" y1="-7.42" x2="3.048" y2="-4" layer="21"/>
-<circle x="-2.54" y="-2.54" radius="0.567959375" width="0.127" layer="21"/>
-<text x="-4.753" y="11.338" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-5.578" y="-2.78" size="1.27" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
-</package>
 <package name="SOT-223">
 <smd name="4" x="0" y="2.6" dx="3" dy="1.75" layer="1"/>
 <smd name="1" x="-2.3" y="-2.6" dx="1.75" dy="0.75" layer="1" rot="R90"/>
@@ -292,148 +270,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="3.81" y1="0.635" x2="3.81" y2="-0.635" width="0.2032" layer="21"/>
 <text x="-3.81" y="1.651" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-3.81" y="-2.667" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
-</package>
-<package name="RESISTOR-V1">
-<wire x1="-1.27" y1="0" x2="-0.381" y2="0" width="0.6096" layer="51"/>
-<wire x1="-0.254" y1="0" x2="0.254" y2="0" width="0.6096" layer="51"/>
-<wire x1="0.381" y1="0" x2="0.762" y2="0" width="0.6096" layer="51"/>
-<circle x="-1.27" y="0" radius="1.016" width="0.1524" layer="21"/>
-<pad name="1" x="-1.27" y="0" drill="0.8128" shape="octagon"/>
-<pad name="2" x="0.762" y="0" drill="0.8128" shape="octagon"/>
-<text x="-2.5908" y="1.524" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-2.5908" y="-2.4892" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
-</package>
-<package name="RESISTOR-H1">
-<wire x1="-3.81" y1="0" x2="-3.429" y2="0" width="0.6096" layer="51"/>
-<wire x1="-3.175" y1="0.889" x2="-2.921" y2="1.143" width="0.1524" layer="21" curve="-90"/>
-<wire x1="-3.175" y1="-0.889" x2="-2.921" y2="-1.143" width="0.1524" layer="21" curve="90"/>
-<wire x1="2.921" y1="-1.143" x2="3.175" y2="-0.889" width="0.1524" layer="21" curve="90"/>
-<wire x1="2.921" y1="1.143" x2="3.175" y2="0.889" width="0.1524" layer="21" curve="-90"/>
-<wire x1="-3.175" y1="-0.889" x2="-3.175" y2="0.889" width="0.1524" layer="51"/>
-<wire x1="-2.921" y1="1.143" x2="-2.54" y2="1.143" width="0.1524" layer="21"/>
-<wire x1="-2.413" y1="1.016" x2="-2.54" y2="1.143" width="0.1524" layer="21"/>
-<wire x1="-2.921" y1="-1.143" x2="-2.54" y2="-1.143" width="0.1524" layer="21"/>
-<wire x1="-2.413" y1="-1.016" x2="-2.54" y2="-1.143" width="0.1524" layer="21"/>
-<wire x1="2.413" y1="1.016" x2="2.54" y2="1.143" width="0.1524" layer="21"/>
-<wire x1="2.413" y1="1.016" x2="-2.413" y2="1.016" width="0.1524" layer="21"/>
-<wire x1="2.413" y1="-1.016" x2="2.54" y2="-1.143" width="0.1524" layer="21"/>
-<wire x1="2.413" y1="-1.016" x2="-2.413" y2="-1.016" width="0.1524" layer="21"/>
-<wire x1="2.921" y1="1.143" x2="2.54" y2="1.143" width="0.1524" layer="21"/>
-<wire x1="2.921" y1="-1.143" x2="2.54" y2="-1.143" width="0.1524" layer="21"/>
-<wire x1="3.175" y1="-0.889" x2="3.175" y2="0.889" width="0.1524" layer="51"/>
-<wire x1="3.429" y1="0" x2="3.81" y2="0" width="0.6096" layer="51"/>
-<pad name="1" x="-3.81" y="0" drill="0.8128" shape="octagon"/>
-<pad name="2" x="3.81" y="0" drill="0.8128" shape="octagon"/>
-<text x="-2.54" y="1.397" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-2.636" y="-2.5388" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
-<rectangle x1="-3.429" y1="-0.3048" x2="-3.175" y2="0.3048" layer="51"/>
-<rectangle x1="3.175" y1="-0.3048" x2="3.429" y2="0.3048" layer="51"/>
-</package>
-<package name="RESISTOR-H2">
-<wire x1="5.08" y1="0" x2="4.064" y2="0" width="0.6096" layer="51"/>
-<wire x1="-5.08" y1="0" x2="-4.064" y2="0" width="0.6096" layer="51"/>
-<wire x1="-3.175" y1="0.889" x2="-2.921" y2="1.143" width="0.1524" layer="21" curve="-90"/>
-<wire x1="-3.175" y1="-0.889" x2="-2.921" y2="-1.143" width="0.1524" layer="21" curve="90"/>
-<wire x1="2.921" y1="-1.143" x2="3.175" y2="-0.889" width="0.1524" layer="21" curve="90"/>
-<wire x1="2.921" y1="1.143" x2="3.175" y2="0.889" width="0.1524" layer="21" curve="-90"/>
-<wire x1="-3.175" y1="-0.889" x2="-3.175" y2="0.889" width="0.1524" layer="21"/>
-<wire x1="-2.921" y1="1.143" x2="-2.54" y2="1.143" width="0.1524" layer="21"/>
-<wire x1="-2.413" y1="1.016" x2="-2.54" y2="1.143" width="0.1524" layer="21"/>
-<wire x1="-2.921" y1="-1.143" x2="-2.54" y2="-1.143" width="0.1524" layer="21"/>
-<wire x1="-2.413" y1="-1.016" x2="-2.54" y2="-1.143" width="0.1524" layer="21"/>
-<wire x1="2.413" y1="1.016" x2="2.54" y2="1.143" width="0.1524" layer="21"/>
-<wire x1="2.413" y1="1.016" x2="-2.413" y2="1.016" width="0.1524" layer="21"/>
-<wire x1="2.413" y1="-1.016" x2="2.54" y2="-1.143" width="0.1524" layer="21"/>
-<wire x1="2.413" y1="-1.016" x2="-2.413" y2="-1.016" width="0.1524" layer="21"/>
-<wire x1="2.921" y1="1.143" x2="2.54" y2="1.143" width="0.1524" layer="21"/>
-<wire x1="2.921" y1="-1.143" x2="2.54" y2="-1.143" width="0.1524" layer="21"/>
-<wire x1="3.175" y1="-0.889" x2="3.175" y2="0.889" width="0.1524" layer="21"/>
-<pad name="1" x="-5.08" y="0" drill="0.8128" shape="octagon"/>
-<pad name="2" x="5.08" y="0" drill="0.8128" shape="octagon"/>
-<text x="-3.048" y="1.524" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-3.2406" y="-2.475" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
-<rectangle x1="3.175" y1="-0.3048" x2="4.0386" y2="0.3048" layer="21"/>
-<rectangle x1="-4.0386" y1="-0.3048" x2="-3.175" y2="0.3048" layer="21"/>
-</package>
-<package name="RESISTOR-H3">
-<wire x1="6.35" y1="0" x2="5.334" y2="0" width="0.6096" layer="51"/>
-<wire x1="-6.35" y1="0" x2="-5.334" y2="0" width="0.6096" layer="51"/>
-<wire x1="-3.175" y1="0.889" x2="-2.921" y2="1.143" width="0.1524" layer="21" curve="-90"/>
-<wire x1="-3.175" y1="-0.889" x2="-2.921" y2="-1.143" width="0.1524" layer="21" curve="90"/>
-<wire x1="2.921" y1="-1.143" x2="3.175" y2="-0.889" width="0.1524" layer="21" curve="90"/>
-<wire x1="2.921" y1="1.143" x2="3.175" y2="0.889" width="0.1524" layer="21" curve="-90"/>
-<wire x1="-3.175" y1="-0.889" x2="-3.175" y2="0.889" width="0.1524" layer="21"/>
-<wire x1="-2.921" y1="1.143" x2="-2.54" y2="1.143" width="0.1524" layer="21"/>
-<wire x1="-2.413" y1="1.016" x2="-2.54" y2="1.143" width="0.1524" layer="21"/>
-<wire x1="-2.921" y1="-1.143" x2="-2.54" y2="-1.143" width="0.1524" layer="21"/>
-<wire x1="-2.413" y1="-1.016" x2="-2.54" y2="-1.143" width="0.1524" layer="21"/>
-<wire x1="2.413" y1="1.016" x2="2.54" y2="1.143" width="0.1524" layer="21"/>
-<wire x1="2.413" y1="1.016" x2="-2.413" y2="1.016" width="0.1524" layer="21"/>
-<wire x1="2.413" y1="-1.016" x2="2.54" y2="-1.143" width="0.1524" layer="21"/>
-<wire x1="2.413" y1="-1.016" x2="-2.413" y2="-1.016" width="0.1524" layer="21"/>
-<wire x1="2.921" y1="1.143" x2="2.54" y2="1.143" width="0.1524" layer="21"/>
-<wire x1="2.921" y1="-1.143" x2="2.54" y2="-1.143" width="0.1524" layer="21"/>
-<wire x1="3.175" y1="-0.889" x2="3.175" y2="0.889" width="0.1524" layer="21"/>
-<wire x1="4.445" y1="0" x2="4.064" y2="0" width="0.6096" layer="21"/>
-<wire x1="-4.445" y1="0" x2="-4.064" y2="0" width="0.6096" layer="21"/>
-<pad name="1" x="-6.35" y="0" drill="0.8128" shape="octagon"/>
-<pad name="2" x="6.35" y="0" drill="0.8128" shape="octagon"/>
-<text x="-3.175" y="1.397" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-3.126" y="-2.4358" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
-<rectangle x1="3.175" y1="-0.3048" x2="4.0386" y2="0.3048" layer="21"/>
-<rectangle x1="-4.0386" y1="-0.3048" x2="-3.175" y2="0.3048" layer="21"/>
-<rectangle x1="4.445" y1="-0.3048" x2="5.3086" y2="0.3048" layer="21"/>
-<rectangle x1="-5.3086" y1="-0.3048" x2="-4.445" y2="0.3048" layer="21"/>
-</package>
-<package name="RESISTOR-H4">
-<wire x1="7.62" y1="0" x2="6.604" y2="0" width="0.6096" layer="51"/>
-<wire x1="-7.62" y1="0" x2="-6.604" y2="0" width="0.6096" layer="51"/>
-<wire x1="-3.175" y1="0.889" x2="-2.921" y2="1.143" width="0.1524" layer="21" curve="-90"/>
-<wire x1="-3.175" y1="-0.889" x2="-2.921" y2="-1.143" width="0.1524" layer="21" curve="90"/>
-<wire x1="2.921" y1="-1.143" x2="3.175" y2="-0.889" width="0.1524" layer="21" curve="90"/>
-<wire x1="2.921" y1="1.143" x2="3.175" y2="0.889" width="0.1524" layer="21" curve="-90"/>
-<wire x1="-3.175" y1="-0.889" x2="-3.175" y2="0.889" width="0.1524" layer="21"/>
-<wire x1="-2.921" y1="1.143" x2="-2.54" y2="1.143" width="0.1524" layer="21"/>
-<wire x1="-2.413" y1="1.016" x2="-2.54" y2="1.143" width="0.1524" layer="21"/>
-<wire x1="-2.921" y1="-1.143" x2="-2.54" y2="-1.143" width="0.1524" layer="21"/>
-<wire x1="-2.413" y1="-1.016" x2="-2.54" y2="-1.143" width="0.1524" layer="21"/>
-<wire x1="2.413" y1="1.016" x2="2.54" y2="1.143" width="0.1524" layer="21"/>
-<wire x1="2.413" y1="1.016" x2="-2.413" y2="1.016" width="0.1524" layer="21"/>
-<wire x1="2.413" y1="-1.016" x2="2.54" y2="-1.143" width="0.1524" layer="21"/>
-<wire x1="2.413" y1="-1.016" x2="-2.413" y2="-1.016" width="0.1524" layer="21"/>
-<wire x1="2.921" y1="1.143" x2="2.54" y2="1.143" width="0.1524" layer="21"/>
-<wire x1="2.921" y1="-1.143" x2="2.54" y2="-1.143" width="0.1524" layer="21"/>
-<wire x1="3.175" y1="-0.889" x2="3.175" y2="0.889" width="0.1524" layer="21"/>
-<wire x1="5.715" y1="0" x2="4.064" y2="0" width="0.6096" layer="21"/>
-<wire x1="-5.715" y1="0" x2="-4.064" y2="0" width="0.6096" layer="21"/>
-<pad name="1" x="-7.62" y="0" drill="0.8128" shape="octagon"/>
-<pad name="2" x="7.62" y="0" drill="0.8128" shape="octagon"/>
-<text x="-3.175" y="1.397" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-3.186" y="-2.4458" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
-<rectangle x1="3.175" y1="-0.3048" x2="4.0386" y2="0.3048" layer="21"/>
-<rectangle x1="-4.0386" y1="-0.3048" x2="-3.175" y2="0.3048" layer="21"/>
-<rectangle x1="5.715" y1="-0.3048" x2="6.5786" y2="0.3048" layer="21"/>
-<rectangle x1="-6.5786" y1="-0.3048" x2="-5.715" y2="0.3048" layer="21"/>
-</package>
-<package name="RESISTOR-V2">
-<wire x1="-1.524" y1="0" x2="-0.635" y2="0" width="0.6096" layer="51"/>
-<wire x1="-0.508" y1="0" x2="0" y2="0" width="0.6096" layer="51"/>
-<wire x1="0.127" y1="0" x2="1.27" y2="0" width="0.6096" layer="51"/>
-<circle x="-1.524" y="0" radius="1.016" width="0.1524" layer="21"/>
-<pad name="1" x="-1.524" y="0" drill="0.8128" shape="octagon"/>
-<pad name="2" x="1.27" y="0" drill="0.8128" shape="octagon"/>
-<text x="-2.8448" y="1.524" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-2.8448" y="-2.4892" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
-</package>
-<package name="RESISTOR-V3">
-<wire x1="-2.032" y1="0" x2="-1.143" y2="0" width="0.6096" layer="51"/>
-<wire x1="-1.016" y1="0" x2="-0.508" y2="0" width="0.6096" layer="51"/>
-<wire x1="-0.381" y1="0" x2="2.032" y2="0" width="0.6096" layer="51"/>
-<circle x="-2.032" y="0" radius="1.016" width="0.1524" layer="21"/>
-<pad name="1" x="-2.032" y="0" drill="0.8128" shape="octagon"/>
-<pad name="2" x="2.032" y="0" drill="0.8128" shape="octagon"/>
-<text x="-3.3528" y="1.524" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-3.3528" y="-2.4892" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 </package>
 <package name="ESP8266-12">
 <wire x1="7.62" y1="11.03" x2="-8.58" y2="11.03" width="0.127" layer="21"/>
@@ -613,21 +449,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <text x="2.54" y="5.08" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
 <pin name="+24V" x="0" y="-2.54" visible="off" length="middle" direction="sup" rot="R90"/>
 </symbol>
-<symbol name="RESISTOR">
-<wire x1="-2.54" y1="0" x2="-2.159" y2="1.016" width="0.2032" layer="94"/>
-<wire x1="-2.159" y1="1.016" x2="-1.524" y2="-1.016" width="0.2032" layer="94"/>
-<wire x1="-1.524" y1="-1.016" x2="-0.889" y2="1.016" width="0.2032" layer="94"/>
-<wire x1="-0.889" y1="1.016" x2="-0.254" y2="-1.016" width="0.2032" layer="94"/>
-<wire x1="-0.254" y1="-1.016" x2="0.381" y2="1.016" width="0.2032" layer="94"/>
-<wire x1="0.381" y1="1.016" x2="1.016" y2="-1.016" width="0.2032" layer="94"/>
-<wire x1="1.016" y1="-1.016" x2="1.651" y2="1.016" width="0.2032" layer="94"/>
-<wire x1="1.651" y1="1.016" x2="2.286" y2="-1.016" width="0.2032" layer="94"/>
-<wire x1="2.286" y1="-1.016" x2="2.54" y2="0" width="0.2032" layer="94"/>
-<text x="-3.81" y="1.4986" size="1.778" layer="95">&gt;NAME</text>
-<text x="-3.81" y="-3.302" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
-<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
-</symbol>
 <symbol name="ESP8266-12">
 <wire x1="10.16" y1="17.78" x2="-10.16" y2="17.78" width="0.254" layer="94"/>
 <wire x1="-10.16" y1="17.78" x2="-10.16" y2="-12.7" width="0.254" layer="94"/>
@@ -719,23 +540,6 @@ In this library the device names are the same as the pin names of the symbols, t
 </device>
 </devices>
 </deviceset>
-<deviceset name="LM7805">
-<gates>
-<gate name="G$1" symbol="LINEAR-REGULATOR" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="TO-220">
-<connects>
-<connect gate="G$1" pin="GND" pad="GND"/>
-<connect gate="G$1" pin="IN" pad="INPUT"/>
-<connect gate="G$1" pin="OUT" pad="OUTPUT"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="AMS1117">
 <gates>
 <gate name="G$1" symbol="LINEAR-REGULATOR" x="0" y="0"/>
@@ -796,94 +600,6 @@ In this library the device names are the same as the pin names of the symbols, t
 </gates>
 <devices>
 <device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="RESISTOR" prefix="R">
-<gates>
-<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
-</gates>
-<devices>
-<device name="V1" package="RESISTOR-V1">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MF" value="" constant="no"/>
-<attribute name="MPN" value="" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="H1" package="RESISTOR-H1">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MF" value="" constant="no"/>
-<attribute name="MPN" value="" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="H2" package="RESISTOR-H2">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MF" value="" constant="no"/>
-<attribute name="MPN" value="" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="H3" package="RESISTOR-H3">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MF" value="" constant="no"/>
-<attribute name="MPN" value="" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="H4" package="RESISTOR-H4">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MF" value="" constant="no"/>
-<attribute name="MPN" value="" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="V2" package="RESISTOR-V2">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MF" value="" constant="no"/>
-<attribute name="MPN" value="" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="V3" package="RESISTOR-V3">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -9691,6 +9407,312 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="stutz-components-library">
+<packages>
+<package name="RESISTOR-V1">
+<wire x1="-1.27" y1="0" x2="-0.381" y2="0" width="0.6096" layer="51"/>
+<wire x1="-0.254" y1="0" x2="0.254" y2="0" width="0.6096" layer="51"/>
+<wire x1="0.381" y1="0" x2="0.762" y2="0" width="0.6096" layer="51"/>
+<circle x="-1.27" y="0" radius="1.016" width="0.1524" layer="21"/>
+<pad name="1" x="-1.27" y="0" drill="0.8128" shape="octagon"/>
+<pad name="2" x="0.762" y="0" drill="0.8128" shape="octagon"/>
+<text x="-2.5908" y="1.524" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-2.5908" y="-2.4892" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<wire x1="-0.508" y1="0" x2="0" y2="0" width="0.127" layer="21"/>
+</package>
+<package name="RESISTOR-H1">
+<wire x1="-3.81" y1="0" x2="-3.429" y2="0" width="0.6096" layer="51"/>
+<wire x1="-3.175" y1="0.889" x2="-2.921" y2="1.143" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-3.175" y1="-0.889" x2="-2.921" y2="-1.143" width="0.1524" layer="21" curve="90"/>
+<wire x1="2.921" y1="-1.143" x2="3.175" y2="-0.889" width="0.1524" layer="21" curve="90"/>
+<wire x1="2.921" y1="1.143" x2="3.175" y2="0.889" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-3.175" y1="-0.889" x2="-3.175" y2="0.889" width="0.1524" layer="51"/>
+<wire x1="-2.921" y1="1.143" x2="-2.54" y2="1.143" width="0.1524" layer="21"/>
+<wire x1="-2.413" y1="1.016" x2="-2.54" y2="1.143" width="0.1524" layer="21"/>
+<wire x1="-2.921" y1="-1.143" x2="-2.54" y2="-1.143" width="0.1524" layer="21"/>
+<wire x1="-2.413" y1="-1.016" x2="-2.54" y2="-1.143" width="0.1524" layer="21"/>
+<wire x1="2.413" y1="1.016" x2="2.54" y2="1.143" width="0.1524" layer="21"/>
+<wire x1="2.413" y1="1.016" x2="-2.413" y2="1.016" width="0.1524" layer="21"/>
+<wire x1="2.413" y1="-1.016" x2="2.54" y2="-1.143" width="0.1524" layer="21"/>
+<wire x1="2.413" y1="-1.016" x2="-2.413" y2="-1.016" width="0.1524" layer="21"/>
+<wire x1="2.921" y1="1.143" x2="2.54" y2="1.143" width="0.1524" layer="21"/>
+<wire x1="2.921" y1="-1.143" x2="2.54" y2="-1.143" width="0.1524" layer="21"/>
+<wire x1="3.175" y1="-0.889" x2="3.175" y2="0.889" width="0.1524" layer="51"/>
+<wire x1="3.429" y1="0" x2="3.81" y2="0" width="0.6096" layer="51"/>
+<pad name="1" x="-3.81" y="0" drill="0.8128" shape="octagon"/>
+<pad name="2" x="3.81" y="0" drill="0.8128" shape="octagon"/>
+<text x="-2.54" y="1.397" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-2.636" y="-2.5388" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<rectangle x1="-3.429" y1="-0.3048" x2="-3.175" y2="0.3048" layer="51"/>
+<rectangle x1="3.175" y1="-0.3048" x2="3.429" y2="0.3048" layer="51"/>
+</package>
+<package name="RESISTOR-H2">
+<wire x1="5.08" y1="0" x2="4.064" y2="0" width="0.6096" layer="51"/>
+<wire x1="-5.08" y1="0" x2="-4.064" y2="0" width="0.6096" layer="51"/>
+<wire x1="-3.175" y1="0.889" x2="-2.921" y2="1.143" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-3.175" y1="-0.889" x2="-2.921" y2="-1.143" width="0.1524" layer="21" curve="90"/>
+<wire x1="2.921" y1="-1.143" x2="3.175" y2="-0.889" width="0.1524" layer="21" curve="90"/>
+<wire x1="2.921" y1="1.143" x2="3.175" y2="0.889" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-3.175" y1="-0.889" x2="-3.175" y2="0.889" width="0.1524" layer="21"/>
+<wire x1="-2.921" y1="1.143" x2="-2.54" y2="1.143" width="0.1524" layer="21"/>
+<wire x1="-2.413" y1="1.016" x2="-2.54" y2="1.143" width="0.1524" layer="21"/>
+<wire x1="-2.921" y1="-1.143" x2="-2.54" y2="-1.143" width="0.1524" layer="21"/>
+<wire x1="-2.413" y1="-1.016" x2="-2.54" y2="-1.143" width="0.1524" layer="21"/>
+<wire x1="2.413" y1="1.016" x2="2.54" y2="1.143" width="0.1524" layer="21"/>
+<wire x1="2.413" y1="1.016" x2="-2.413" y2="1.016" width="0.1524" layer="21"/>
+<wire x1="2.413" y1="-1.016" x2="2.54" y2="-1.143" width="0.1524" layer="21"/>
+<wire x1="2.413" y1="-1.016" x2="-2.413" y2="-1.016" width="0.1524" layer="21"/>
+<wire x1="2.921" y1="1.143" x2="2.54" y2="1.143" width="0.1524" layer="21"/>
+<wire x1="2.921" y1="-1.143" x2="2.54" y2="-1.143" width="0.1524" layer="21"/>
+<wire x1="3.175" y1="-0.889" x2="3.175" y2="0.889" width="0.1524" layer="21"/>
+<pad name="1" x="-5.08" y="0" drill="0.8128" shape="octagon"/>
+<pad name="2" x="5.08" y="0" drill="0.8128" shape="octagon"/>
+<text x="-3.048" y="1.524" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-3.2406" y="-2.475" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<rectangle x1="3.175" y1="-0.3048" x2="4.0386" y2="0.3048" layer="21"/>
+<rectangle x1="-4.0386" y1="-0.3048" x2="-3.175" y2="0.3048" layer="21"/>
+</package>
+<package name="RESISTOR-H3">
+<wire x1="6.35" y1="0" x2="5.334" y2="0" width="0.6096" layer="51"/>
+<wire x1="-6.35" y1="0" x2="-5.334" y2="0" width="0.6096" layer="51"/>
+<wire x1="-3.175" y1="0.889" x2="-2.921" y2="1.143" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-3.175" y1="-0.889" x2="-2.921" y2="-1.143" width="0.1524" layer="21" curve="90"/>
+<wire x1="2.921" y1="-1.143" x2="3.175" y2="-0.889" width="0.1524" layer="21" curve="90"/>
+<wire x1="2.921" y1="1.143" x2="3.175" y2="0.889" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-3.175" y1="-0.889" x2="-3.175" y2="0.889" width="0.1524" layer="21"/>
+<wire x1="-2.921" y1="1.143" x2="-2.54" y2="1.143" width="0.1524" layer="21"/>
+<wire x1="-2.413" y1="1.016" x2="-2.54" y2="1.143" width="0.1524" layer="21"/>
+<wire x1="-2.921" y1="-1.143" x2="-2.54" y2="-1.143" width="0.1524" layer="21"/>
+<wire x1="-2.413" y1="-1.016" x2="-2.54" y2="-1.143" width="0.1524" layer="21"/>
+<wire x1="2.413" y1="1.016" x2="2.54" y2="1.143" width="0.1524" layer="21"/>
+<wire x1="2.413" y1="1.016" x2="-2.413" y2="1.016" width="0.1524" layer="21"/>
+<wire x1="2.413" y1="-1.016" x2="2.54" y2="-1.143" width="0.1524" layer="21"/>
+<wire x1="2.413" y1="-1.016" x2="-2.413" y2="-1.016" width="0.1524" layer="21"/>
+<wire x1="2.921" y1="1.143" x2="2.54" y2="1.143" width="0.1524" layer="21"/>
+<wire x1="2.921" y1="-1.143" x2="2.54" y2="-1.143" width="0.1524" layer="21"/>
+<wire x1="3.175" y1="-0.889" x2="3.175" y2="0.889" width="0.1524" layer="21"/>
+<wire x1="4.445" y1="0" x2="4.064" y2="0" width="0.6096" layer="21"/>
+<wire x1="-4.445" y1="0" x2="-4.064" y2="0" width="0.6096" layer="21"/>
+<pad name="1" x="-6.35" y="0" drill="0.8128" shape="octagon"/>
+<pad name="2" x="6.35" y="0" drill="0.8128" shape="octagon"/>
+<text x="-3.175" y="1.397" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-3.126" y="-2.4358" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<rectangle x1="3.175" y1="-0.3048" x2="4.0386" y2="0.3048" layer="21"/>
+<rectangle x1="-4.0386" y1="-0.3048" x2="-3.175" y2="0.3048" layer="21"/>
+<rectangle x1="4.445" y1="-0.3048" x2="5.3086" y2="0.3048" layer="21"/>
+<rectangle x1="-5.3086" y1="-0.3048" x2="-4.445" y2="0.3048" layer="21"/>
+</package>
+<package name="RESISTOR-H4">
+<wire x1="7.62" y1="0" x2="6.604" y2="0" width="0.6096" layer="51"/>
+<wire x1="-7.62" y1="0" x2="-6.604" y2="0" width="0.6096" layer="51"/>
+<wire x1="-3.175" y1="0.889" x2="-2.921" y2="1.143" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-3.175" y1="-0.889" x2="-2.921" y2="-1.143" width="0.1524" layer="21" curve="90"/>
+<wire x1="2.921" y1="-1.143" x2="3.175" y2="-0.889" width="0.1524" layer="21" curve="90"/>
+<wire x1="2.921" y1="1.143" x2="3.175" y2="0.889" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-3.175" y1="-0.889" x2="-3.175" y2="0.889" width="0.1524" layer="21"/>
+<wire x1="-2.921" y1="1.143" x2="-2.54" y2="1.143" width="0.1524" layer="21"/>
+<wire x1="-2.413" y1="1.016" x2="-2.54" y2="1.143" width="0.1524" layer="21"/>
+<wire x1="-2.921" y1="-1.143" x2="-2.54" y2="-1.143" width="0.1524" layer="21"/>
+<wire x1="-2.413" y1="-1.016" x2="-2.54" y2="-1.143" width="0.1524" layer="21"/>
+<wire x1="2.413" y1="1.016" x2="2.54" y2="1.143" width="0.1524" layer="21"/>
+<wire x1="2.413" y1="1.016" x2="-2.413" y2="1.016" width="0.1524" layer="21"/>
+<wire x1="2.413" y1="-1.016" x2="2.54" y2="-1.143" width="0.1524" layer="21"/>
+<wire x1="2.413" y1="-1.016" x2="-2.413" y2="-1.016" width="0.1524" layer="21"/>
+<wire x1="2.921" y1="1.143" x2="2.54" y2="1.143" width="0.1524" layer="21"/>
+<wire x1="2.921" y1="-1.143" x2="2.54" y2="-1.143" width="0.1524" layer="21"/>
+<wire x1="3.175" y1="-0.889" x2="3.175" y2="0.889" width="0.1524" layer="21"/>
+<wire x1="5.715" y1="0" x2="4.064" y2="0" width="0.6096" layer="21"/>
+<wire x1="-5.715" y1="0" x2="-4.064" y2="0" width="0.6096" layer="21"/>
+<pad name="1" x="-7.62" y="0" drill="0.8128" shape="octagon"/>
+<pad name="2" x="7.62" y="0" drill="0.8128" shape="octagon"/>
+<text x="-3.175" y="1.397" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-3.186" y="-2.4458" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<rectangle x1="3.175" y1="-0.3048" x2="4.0386" y2="0.3048" layer="21"/>
+<rectangle x1="-4.0386" y1="-0.3048" x2="-3.175" y2="0.3048" layer="21"/>
+<rectangle x1="5.715" y1="-0.3048" x2="6.5786" y2="0.3048" layer="21"/>
+<rectangle x1="-6.5786" y1="-0.3048" x2="-5.715" y2="0.3048" layer="21"/>
+</package>
+<package name="RESISTOR-V2">
+<wire x1="-1.524" y1="0" x2="-0.635" y2="0" width="0.6096" layer="51"/>
+<wire x1="-0.508" y1="0" x2="0" y2="0" width="0.6096" layer="51"/>
+<wire x1="0.127" y1="0" x2="1.27" y2="0" width="0.6096" layer="51"/>
+<circle x="-1.524" y="0" radius="1.016" width="0.1524" layer="21"/>
+<pad name="1" x="-1.524" y="0" drill="0.8128" shape="octagon"/>
+<pad name="2" x="1.27" y="0" drill="0.8128" shape="octagon"/>
+<text x="-2.8448" y="1.524" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-2.8448" y="-2.4892" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<wire x1="-0.762" y1="0" x2="0.508" y2="0" width="0.127" layer="21"/>
+</package>
+<package name="RESISTOR-V3">
+<wire x1="-2.032" y1="0" x2="-1.143" y2="0" width="0.6096" layer="51"/>
+<wire x1="-1.016" y1="0" x2="-0.508" y2="0" width="0.6096" layer="51"/>
+<wire x1="-0.381" y1="0" x2="2.032" y2="0" width="0.6096" layer="51"/>
+<circle x="-2.032" y="0" radius="1.016" width="0.1524" layer="21"/>
+<pad name="1" x="-2.032" y="0" drill="0.8128" shape="octagon"/>
+<pad name="2" x="2.032" y="0" drill="0.8128" shape="octagon"/>
+<text x="-3.3528" y="1.524" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-3.3528" y="-2.4892" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<wire x1="-1.27" y1="0" x2="1.27" y2="0" width="0.127" layer="21"/>
+</package>
+<package name="TO-220">
+<pad name="INPUT" x="-2.54" y="-8.89" drill="0.8" shape="long" rot="R90"/>
+<pad name="GND" x="0" y="-8.89" drill="0.8" shape="long" rot="R90"/>
+<pad name="OUTPUT" x="2.54" y="-8.89" drill="0.8" shape="long" rot="R90"/>
+<wire x1="-5.08" y1="-4.064" x2="-5.08" y2="3.81" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="3.81" x2="-5.08" y2="4.572" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="4.572" x2="5.08" y2="4.572" width="0.127" layer="21"/>
+<wire x1="5.08" y1="4.572" x2="5.08" y2="3.81" width="0.127" layer="21"/>
+<wire x1="5.08" y1="3.81" x2="5.08" y2="-4.064" width="0.127" layer="21"/>
+<wire x1="5.08" y1="-4.064" x2="-5.08" y2="-4.064" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="3.81" x2="5.08" y2="3.81" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="4.572" x2="-5.08" y2="10.922" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="10.922" x2="5.08" y2="10.922" width="0.127" layer="21"/>
+<wire x1="5.08" y1="10.922" x2="5.08" y2="4.572" width="0.127" layer="21"/>
+<circle x="0" y="8.128" radius="1.8923" width="0.127" layer="51"/>
+<rectangle x1="-3.048" y1="-7.42" x2="-2.032" y2="-4" layer="21"/>
+<rectangle x1="-0.508" y1="-7.42" x2="0.508" y2="-4" layer="21"/>
+<rectangle x1="2.032" y1="-7.42" x2="3.048" y2="-4" layer="21"/>
+<circle x="-2.54" y="-2.54" radius="0.567959375" width="0.127" layer="21"/>
+<text x="-4.753" y="11.338" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-5.578" y="-2.78" size="1.27" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="RESISTOR">
+<wire x1="-2.54" y1="0" x2="-2.159" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="-2.159" y1="1.016" x2="-1.524" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="-1.524" y1="-1.016" x2="-0.889" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="-0.889" y1="1.016" x2="-0.254" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="-0.254" y1="-1.016" x2="0.381" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="0.381" y1="1.016" x2="1.016" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="1.016" y1="-1.016" x2="1.651" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="1.651" y1="1.016" x2="2.286" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="2.286" y1="-1.016" x2="2.54" y2="0" width="0.2032" layer="94"/>
+<text x="-3.81" y="1.4986" size="1.778" layer="95">&gt;NAME</text>
+<text x="-3.81" y="-3.302" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+</symbol>
+<symbol name="LINEAR-REGULATOR">
+<wire x1="-7.62" y1="-3.81" x2="7.62" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-3.81" x2="7.62" y2="6.35" width="0.254" layer="94"/>
+<wire x1="7.62" y1="6.35" x2="-7.62" y2="6.35" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="6.35" x2="-7.62" y2="-3.81" width="0.254" layer="94"/>
+<text x="-10.16" y="7.62" size="1.778" layer="95">&gt;NAME</text>
+<text x="2.54" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="GND" x="0" y="-6.35" visible="pin" length="short" direction="pwr" rot="R90"/>
+<pin name="OUT" x="10.16" y="2.54" visible="pin" length="short" direction="pwr" rot="R180"/>
+<pin name="IN" x="-10.16" y="2.54" visible="pin" length="short" direction="pwr"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="RESISTOR" prefix="R">
+<gates>
+<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="V1" package="RESISTOR-V1">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="H1" package="RESISTOR-H1">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="H2" package="RESISTOR-H2">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="H3" package="RESISTOR-H3">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="H4" package="RESISTOR-H4">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="V2" package="RESISTOR-V2">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="V3" package="RESISTOR-V3">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="LM7805">
+<gates>
+<gate name="G$1" symbol="LINEAR-REGULATOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TO-220">
+<connects>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="IN" pad="INPUT"/>
+<connect gate="G$1" pin="OUT" pad="OUTPUT"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -9715,10 +9737,8 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 </part>
 <part name="SUPPLY16" library="stutz-eagle" deviceset="+3.3V" device=""/>
 <part name="SUPPLY17" library="supply2" deviceset="GND" device=""/>
-<part name="C3" library="capacitor-wima" deviceset="C" device="2.5/2" value="470uF">
-<attribute name="MPN" value="1C10Z5U104M050B"/>
-</part>
-<part name="C4" library="capacitor-wima" deviceset="C" device="2.5/2" value="470uF">
+<part name="C3" library="rcl" deviceset="CPOL-EU" device="E2,5-6E" value="470uF"/>
+<part name="C4" library="rcl" deviceset="CPOL-EU" device="E2,5-6E" value="470uF">
 <attribute name="MPN" value="FK18X5R0J106M"/>
 </part>
 <part name="FRAME1" library="frames" deviceset="A4L-LOC" device=""/>
@@ -9736,7 +9756,7 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <part name="C2" library="capacitor-wima" deviceset="C" device="2.5/2" value="10uF"/>
 <part name="C5" library="capacitor-wima" deviceset="C" device="2.5/2" value="10uF"/>
 <part name="U$1" library="stutz-eagle" deviceset="+24V" device=""/>
-<part name="T2" library="stutz-eagle" deviceset="LM7805" device="" value="LM7805">
+<part name="T2" library="stutz-components-library" deviceset="LM7805" device="" value="LM7805">
 <attribute name="MPN" value="LM2937ET-3.3"/>
 </part>
 <part name="SUPPLY12" library="supply2" deviceset="GND" device=""/>
@@ -9751,18 +9771,18 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <part name="E1" library="stutz-eagle" deviceset="ESP8266-12" device=""/>
 <part name="SUPPLY13" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY14" library="stutz-eagle" deviceset="+3.3V" device=""/>
-<part name="R2" library="stutz-eagle" deviceset="RESISTOR" device="V1" value="10k"/>
-<part name="R3" library="stutz-eagle" deviceset="RESISTOR" device="V1" value="10k"/>
+<part name="R2" library="stutz-components-library" deviceset="RESISTOR" device="V1" value="10k"/>
+<part name="R3" library="stutz-components-library" deviceset="RESISTOR" device="V1" value="10k"/>
 <part name="SUPPLY5" library="stutz-eagle" deviceset="+3.3V" device=""/>
-<part name="R5" library="stutz-eagle" deviceset="RESISTOR" device="V1" value="10k"/>
-<part name="R1" library="stutz-eagle" deviceset="RESISTOR" device="V1" value="10k"/>
-<part name="R4" library="stutz-eagle" deviceset="RESISTOR" device="V1" value="10k"/>
+<part name="R5" library="stutz-components-library" deviceset="RESISTOR" device="V1" value="10k"/>
+<part name="R1" library="stutz-components-library" deviceset="RESISTOR" device="V1" value="10k"/>
+<part name="R4" library="stutz-components-library" deviceset="RESISTOR" device="V1" value="10k"/>
 <part name="C9" library="rcl" deviceset="CPOL-EU" device="E2.5-6" value="470uF"/>
 <part name="SUPPLY4" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY6" library="stutz-eagle" deviceset="+3.3V" device=""/>
-<part name="R6" library="stutz-eagle" deviceset="RESISTOR" device="V1" value="10k"/>
-<part name="R7" library="stutz-eagle" deviceset="RESISTOR" device="V1" value="10k"/>
-<part name="R8" library="stutz-eagle" deviceset="RESISTOR" device="V1" value="10k"/>
+<part name="R6" library="stutz-components-library" deviceset="RESISTOR" device="V1" value="10k"/>
+<part name="R7" library="stutz-components-library" deviceset="RESISTOR" device="V1" value="10k"/>
+<part name="R8" library="stutz-components-library" deviceset="RESISTOR" device="V1" value="10k"/>
 <part name="W1" library="stutz-eagle" deviceset="TPS382X" device="" value="TPS3823-33"/>
 <part name="SUPPLY11" library="stutz-eagle" deviceset="+3.3V" device=""/>
 <part name="SUPPLY15" library="supply2" deviceset="GND" device=""/>
@@ -9790,9 +9810,7 @@ OPTIONAL FOR 8-35V INPUTS</text>
 </instance>
 <instance part="SUPPLY16" gate="G$1" x="48.26" y="156.21"/>
 <instance part="SUPPLY17" gate="GND" x="31.75" y="134.62"/>
-<instance part="C3" gate="G$1" x="15.24" y="144.78">
-<attribute name="MPN" x="15.24" y="144.78" size="1.778" layer="96" display="off"/>
-</instance>
+<instance part="C3" gate="G$1" x="15.24" y="144.78"/>
 <instance part="C4" gate="G$1" x="48.26" y="144.78">
 <attribute name="MPN" x="48.26" y="144.78" size="1.778" layer="96" display="off"/>
 </instance>
@@ -9860,9 +9878,9 @@ OPTIONAL FOR 8-35V INPUTS</text>
 <wire x1="31.75" y1="140.97" x2="31.75" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="31.75" y1="139.7" x2="31.75" y2="137.16" width="0.1524" layer="91"/>
 <junction x="31.75" y="139.7"/>
-<pinref part="C3" gate="G$1" pin="2"/>
+<pinref part="C3" gate="G$1" pin="-"/>
 <wire x1="15.24" y1="139.7" x2="31.75" y2="139.7" width="0.1524" layer="91"/>
-<pinref part="C4" gate="G$1" pin="2"/>
+<pinref part="C4" gate="G$1" pin="-"/>
 <wire x1="31.75" y1="139.7" x2="48.26" y2="139.7" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="2"/>
 <wire x1="15.24" y1="139.7" x2="7.62" y2="139.7" width="0.1524" layer="91"/>
@@ -9942,7 +9960,7 @@ OPTIONAL FOR 8-35V INPUTS</text>
 <net name="+3.3V" class="4">
 <segment>
 <pinref part="SUPPLY16" gate="G$1" pin="+3.3V"/>
-<pinref part="C4" gate="G$1" pin="1"/>
+<pinref part="C4" gate="G$1" pin="+"/>
 <wire x1="48.26" y1="153.67" x2="48.26" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="T1" gate="G$1" pin="OUT"/>
 <wire x1="48.26" y1="149.86" x2="48.26" y2="147.32" width="0.1524" layer="91"/>
@@ -10024,7 +10042,7 @@ OPTIONAL FOR 8-35V INPUTS</text>
 <wire x1="15.24" y1="153.67" x2="15.24" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="T1" gate="G$1" pin="IN"/>
 <wire x1="15.24" y1="149.86" x2="21.59" y2="149.86" width="0.1524" layer="91"/>
-<pinref part="C3" gate="G$1" pin="1"/>
+<pinref part="C3" gate="G$1" pin="+"/>
 <wire x1="15.24" y1="147.32" x2="15.24" y2="149.86" width="0.1524" layer="91"/>
 <junction x="15.24" y="149.86"/>
 <pinref part="SUPPLY3" gate="G$1" pin="+5V"/>
