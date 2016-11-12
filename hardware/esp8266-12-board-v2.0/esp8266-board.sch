@@ -229,28 +229,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <text x="-6.35" y="1.651" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-6.35" y="-2.667" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 </package>
-<package name="TO-220">
-<pad name="INPUT" x="-2.54" y="-8.89" drill="0.8" shape="long" rot="R90"/>
-<pad name="GND" x="0" y="-8.89" drill="0.8" shape="long" rot="R90"/>
-<pad name="OUTPUT" x="2.54" y="-8.89" drill="0.8" shape="long" rot="R90"/>
-<wire x1="-5.08" y1="-4.064" x2="-5.08" y2="3.81" width="0.127" layer="51"/>
-<wire x1="-5.08" y1="3.81" x2="-5.08" y2="4.572" width="0.127" layer="51"/>
-<wire x1="-5.08" y1="4.572" x2="5.08" y2="4.572" width="0.127" layer="51"/>
-<wire x1="5.08" y1="4.572" x2="5.08" y2="3.81" width="0.127" layer="51"/>
-<wire x1="5.08" y1="3.81" x2="5.08" y2="-4.064" width="0.127" layer="51"/>
-<wire x1="5.08" y1="-4.064" x2="-5.08" y2="-4.064" width="0.127" layer="51"/>
-<wire x1="-5.08" y1="3.81" x2="5.08" y2="3.81" width="0.127" layer="51"/>
-<wire x1="-5.08" y1="4.572" x2="-5.08" y2="10.922" width="0.127" layer="51"/>
-<wire x1="-5.08" y1="10.922" x2="5.08" y2="10.922" width="0.127" layer="51"/>
-<wire x1="5.08" y1="10.922" x2="5.08" y2="4.572" width="0.127" layer="51"/>
-<circle x="0" y="8.128" radius="1.8923" width="0.127" layer="51"/>
-<rectangle x1="-3.048" y1="-7.42" x2="-2.032" y2="-4" layer="21"/>
-<rectangle x1="-0.508" y1="-7.42" x2="0.508" y2="-4" layer="21"/>
-<rectangle x1="2.032" y1="-7.42" x2="3.048" y2="-4" layer="21"/>
-<circle x="-2.54" y="-2.54" radius="0.567959375" width="0.127" layer="21"/>
-<text x="-4.753" y="11.338" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-5.578" y="-2.78" size="1.27" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
-</package>
 <package name="SOT-223">
 <smd name="4" x="0" y="2.6" dx="3" dy="1.75" layer="1"/>
 <smd name="1" x="-2.3" y="-2.6" dx="1.75" dy="0.75" layer="1" rot="R90"/>
@@ -556,23 +534,6 @@ In this library the device names are the same as the pin names of the symbols, t
 </gates>
 <devices>
 <device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="LM7805">
-<gates>
-<gate name="G$1" symbol="LINEAR-REGULATOR" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="TO-220">
-<connects>
-<connect gate="G$1" pin="GND" pad="GND"/>
-<connect gate="G$1" pin="IN" pad="INPUT"/>
-<connect gate="G$1" pin="OUT" pad="OUTPUT"/>
-</connects>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -9593,6 +9554,28 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <text x="-3.3528" y="-2.4892" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <wire x1="-1.27" y1="0" x2="1.27" y2="0" width="0.127" layer="21"/>
 </package>
+<package name="TO-220">
+<pad name="INPUT" x="-2.54" y="-8.89" drill="0.8" shape="long" rot="R90"/>
+<pad name="GND" x="0" y="-8.89" drill="0.8" shape="long" rot="R90"/>
+<pad name="OUTPUT" x="2.54" y="-8.89" drill="0.8" shape="long" rot="R90"/>
+<wire x1="-5.08" y1="-4.064" x2="-5.08" y2="3.81" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="3.81" x2="-5.08" y2="4.572" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="4.572" x2="5.08" y2="4.572" width="0.127" layer="21"/>
+<wire x1="5.08" y1="4.572" x2="5.08" y2="3.81" width="0.127" layer="21"/>
+<wire x1="5.08" y1="3.81" x2="5.08" y2="-4.064" width="0.127" layer="21"/>
+<wire x1="5.08" y1="-4.064" x2="-5.08" y2="-4.064" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="3.81" x2="5.08" y2="3.81" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="4.572" x2="-5.08" y2="10.922" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="10.922" x2="5.08" y2="10.922" width="0.127" layer="21"/>
+<wire x1="5.08" y1="10.922" x2="5.08" y2="4.572" width="0.127" layer="21"/>
+<circle x="0" y="8.128" radius="1.8923" width="0.127" layer="51"/>
+<rectangle x1="-3.048" y1="-7.42" x2="-2.032" y2="-4" layer="21"/>
+<rectangle x1="-0.508" y1="-7.42" x2="0.508" y2="-4" layer="21"/>
+<rectangle x1="2.032" y1="-7.42" x2="3.048" y2="-4" layer="21"/>
+<circle x="-2.54" y="-2.54" radius="0.567959375" width="0.127" layer="21"/>
+<text x="-4.753" y="11.338" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-5.578" y="-2.78" size="1.27" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="RESISTOR">
@@ -9609,6 +9592,17 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <text x="-3.81" y="-3.302" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+</symbol>
+<symbol name="LINEAR-REGULATOR">
+<wire x1="-7.62" y1="-3.81" x2="7.62" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-3.81" x2="7.62" y2="6.35" width="0.254" layer="94"/>
+<wire x1="7.62" y1="6.35" x2="-7.62" y2="6.35" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="6.35" x2="-7.62" y2="-3.81" width="0.254" layer="94"/>
+<text x="-10.16" y="7.62" size="1.778" layer="95">&gt;NAME</text>
+<text x="2.54" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="GND" x="0" y="-6.35" visible="pin" length="short" direction="pwr" rot="R90"/>
+<pin name="OUT" x="10.16" y="2.54" visible="pin" length="short" direction="pwr" rot="R180"/>
+<pin name="IN" x="-10.16" y="2.54" visible="pin" length="short" direction="pwr"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -9700,6 +9694,23 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="LM7805">
+<gates>
+<gate name="G$1" symbol="LINEAR-REGULATOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TO-220">
+<connects>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="IN" pad="INPUT"/>
+<connect gate="G$1" pin="OUT" pad="OUTPUT"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -9745,7 +9756,7 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <part name="C2" library="capacitor-wima" deviceset="C" device="2.5/2" value="10uF"/>
 <part name="C5" library="capacitor-wima" deviceset="C" device="2.5/2" value="10uF"/>
 <part name="U$1" library="stutz-eagle" deviceset="+24V" device=""/>
-<part name="T2" library="stutz-eagle" deviceset="LM7805" device="" value="LM7805">
+<part name="T2" library="stutz-components-library" deviceset="LM7805" device="" value="LM7805">
 <attribute name="MPN" value="LM2937ET-3.3"/>
 </part>
 <part name="SUPPLY12" library="supply2" deviceset="GND" device=""/>
@@ -9775,7 +9786,7 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <part name="W1" library="stutz-eagle" deviceset="TPS382X" device="" value="TPS3823-33"/>
 <part name="SUPPLY11" library="stutz-eagle" deviceset="+3.3V" device=""/>
 <part name="SUPPLY15" library="supply2" deviceset="GND" device=""/>
-<part name="SD1" library="stutz-eagle" deviceset="PIN-HEADER-7PIN" device="" value="CS  SI GND 3.3V SCK GND SO"/>
+<part name="SD1" library="stutz-eagle" deviceset="PIN-HEADER-7PIN" device="" value="SO GND SCK 3.3V GND SI CS"/>
 </parts>
 <sheets>
 <sheet>
