@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -8678,6 +8678,10 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <part name="OUTPWR" library="stutz-components-library" deviceset="PIN-HEADER-2PIN" device="" value="+3.3V GND"/>
 <part name="SUPPLY1" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY3" library="stutz-eagle" deviceset="+3.3V" device=""/>
+<part name="R15" library="stutz-components-library" deviceset="RESISTOR" device="0805" value="3.3k"/>
+<part name="SUPPLY11" library="supply2" deviceset="GND" device=""/>
+<part name="R16" library="stutz-components-library" deviceset="RESISTOR" device="0805" value="350"/>
+<part name="R17" library="stutz-components-library" deviceset="RESISTOR" device="0805" value="350"/>
 </parts>
 <sheets>
 <sheet>
@@ -8718,7 +8722,7 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <instance part="R7" gate="G$1" x="198.12" y="88.9"/>
 <instance part="R8" gate="G$1" x="193.04" y="93.98"/>
 <instance part="R10" gate="G$1" x="198.12" y="101.6"/>
-<instance part="SUPPLY18" gate="GND" x="58.42" y="27.94"/>
+<instance part="SUPPLY18" gate="GND" x="91.44" y="27.94"/>
 <instance part="SUPPLY10" gate="G$1" x="39.37" y="154.67"/>
 <instance part="SUPPLY8" gate="G$1" x="50.8" y="39.37"/>
 <instance part="J1" gate="G$1" x="175.26" y="127"/>
@@ -8743,6 +8747,10 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 </instance>
 <instance part="SUPPLY1" gate="GND" x="71.12" y="139.7"/>
 <instance part="SUPPLY3" gate="G$1" x="68.58" y="154.67"/>
+<instance part="R15" gate="G$1" x="184.658" y="38.608" rot="R270"/>
+<instance part="SUPPLY11" gate="GND" x="184.658" y="29.972"/>
+<instance part="R16" gate="G$1" x="60.96" y="27.94" rot="R180"/>
+<instance part="R17" gate="G$1" x="69.85" y="25.4" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -8801,13 +8809,18 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <segment>
 <pinref part="EXTERNAL" gate="G$1" pin="2"/>
 <pinref part="SUPPLY18" gate="GND" pin="GND"/>
-<wire x1="40.64" y1="30.48" x2="58.42" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="30.48" x2="91.44" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="SUPPLY1" gate="GND" pin="GND"/>
 <wire x1="71.12" y1="146.05" x2="71.12" y2="142.24" width="0.1524" layer="91"/>
 <pinref part="OUTPWR" gate="G$1" pin="2"/>
 <wire x1="60.96" y1="146.05" x2="71.12" y2="146.05" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="SUPPLY11" gate="GND" pin="GND"/>
+<pinref part="R15" gate="G$1" pin="2"/>
+<wire x1="184.658" y1="32.512" x2="184.658" y2="33.528" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+3.3V" class="5">
@@ -8917,14 +8930,9 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <label x="66.04" y="104.14" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="P3" gate="G$1" pin="5"/>
-<wire x1="170.18" y1="144.78" x2="182.88" y2="144.78" width="0.1524" layer="91"/>
-<label x="170.18" y="144.78" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="40.64" y1="25.4" x2="53.34" y2="25.4" width="0.1524" layer="91"/>
-<label x="43.18" y="25.4" size="1.778" layer="95"/>
-<pinref part="EXTERNAL" gate="G$1" pin="4"/>
+<wire x1="74.93" y1="25.4" x2="86.36" y2="25.4" width="0.1524" layer="91"/>
+<pinref part="R17" gate="G$1" pin="1"/>
+<label x="85.09" y="24.892" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="ESP_GPIO2" class="0">
@@ -8960,14 +8968,9 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <label x="66.04" y="101.6" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="P3" gate="G$1" pin="4"/>
-<wire x1="170.18" y1="147.32" x2="182.88" y2="147.32" width="0.1524" layer="91"/>
-<label x="170.18" y="147.32" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="40.64" y1="27.94" x2="53.34" y2="27.94" width="0.1524" layer="91"/>
-<label x="43.18" y="27.94" size="1.778" layer="95"/>
-<pinref part="EXTERNAL" gate="G$1" pin="3"/>
+<wire x1="66.04" y1="27.94" x2="86.36" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="R16" gate="G$1" pin="1"/>
+<label x="85.344" y="27.432" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="ESP_RST" class="0">
@@ -9114,7 +9117,11 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <segment>
 <pinref part="W1" gate="G$1" pin="SET2"/>
 <pinref part="J2" gate="G$1" pin="1"/>
-<wire x1="168.91" y1="44.45" x2="190.5" y2="44.45" width="0.1524" layer="91"/>
+<wire x1="168.91" y1="44.45" x2="184.658" y2="44.45" width="0.1524" layer="91"/>
+<pinref part="R15" gate="G$1" pin="1"/>
+<wire x1="184.658" y1="44.45" x2="190.5" y2="44.45" width="0.1524" layer="91"/>
+<wire x1="184.658" y1="43.688" x2="184.658" y2="44.45" width="0.1524" layer="91"/>
+<junction x="184.658" y="44.45"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -9122,6 +9129,32 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <pinref part="R9" gate="G$1" pin="2"/>
 <pinref part="J1" gate="G$1" pin="2"/>
 <wire x1="185.42" y1="127" x2="180.34" y2="127" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="RX_PROT" class="0">
+<segment>
+<pinref part="EXTERNAL" gate="G$1" pin="3"/>
+<wire x1="40.64" y1="27.94" x2="55.88" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="R16" gate="G$1" pin="2"/>
+<label x="55.118" y="29.718" size="1.778" layer="95" rot="R180"/>
+</segment>
+<segment>
+<pinref part="P3" gate="G$1" pin="4"/>
+<wire x1="170.18" y1="147.32" x2="186.69" y2="147.32" width="0.1524" layer="91"/>
+<label x="172.72" y="147.32" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="TX_PROT" class="0">
+<segment>
+<pinref part="EXTERNAL" gate="G$1" pin="4"/>
+<wire x1="40.64" y1="25.4" x2="64.77" y2="25.4" width="0.1524" layer="91"/>
+<pinref part="R17" gate="G$1" pin="2"/>
+<label x="54.61" y="27.178" size="1.778" layer="95" rot="R180"/>
+</segment>
+<segment>
+<pinref part="P3" gate="G$1" pin="5"/>
+<wire x1="170.18" y1="144.78" x2="186.69" y2="144.78" width="0.1524" layer="91"/>
+<label x="172.72" y="144.78" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
