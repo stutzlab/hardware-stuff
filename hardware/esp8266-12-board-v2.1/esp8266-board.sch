@@ -7909,8 +7909,8 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <package name="JUMPER-PAD-2-ROUND">
 <smd name="1" x="-1.27" y="0" dx="0.3048" dy="0.1524" layer="1" roundness="20" rot="R270" stop="no" thermals="no" cream="no"/>
 <smd name="2" x="1.27" y="0" dx="0.3048" dy="0.1524" layer="1" roundness="20" rot="R90" stop="no" thermals="no" cream="no"/>
-<text x="-2.8575" y="2.2225" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-3.175" y="-3.4925" size="1.27" layer="27">&gt;VALUE</text>
+<text x="-2.8575" y="1.2827" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-3.2004" y="-2.4003" size="1.27" layer="27">&gt;VALUE</text>
 <polygon width="0.00508125" layer="1">
 <vertex x="0.351125" y="-0.66875" curve="85"/>
 <vertex x="1.441125" y="0.03" curve="85"/>
@@ -7927,10 +7927,12 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <vertex x="-0.01" y="-0.58875" curve="-90"/>
 <vertex x="-1.45875" y="0.06" curve="-90"/>
 </polygon>
-<wire x1="-1.53" y1="-0.76" x2="-1.53" y2="0.78" width="0.127" layer="21"/>
-<wire x1="-1.53" y1="0.78" x2="1.57" y2="0.78" width="0.127" layer="21"/>
-<wire x1="1.57" y1="0.78" x2="1.57" y2="-0.76" width="0.127" layer="21"/>
-<wire x1="1.57" y1="-0.76" x2="-1.53" y2="-0.76" width="0.127" layer="21"/>
+<wire x1="-1.53" y1="-0.76" x2="-1.53" y2="0.78" width="0.127" layer="51"/>
+<wire x1="-1.53" y1="0.78" x2="1.57" y2="0.78" width="0.127" layer="51"/>
+<wire x1="1.57" y1="0.78" x2="1.57" y2="-0.76" width="0.127" layer="51"/>
+<wire x1="1.57" y1="-0.76" x2="-1.53" y2="-0.76" width="0.127" layer="51"/>
+<wire x1="-0.381" y1="0.762" x2="0.381" y2="0.762" width="0.127" layer="21"/>
+<wire x1="-0.381" y1="-0.762" x2="0.381" y2="-0.762" width="0.127" layer="21"/>
 </package>
 <package name="PIN-HEADER-2PIN">
 <wire x1="-1.905" y1="1.27" x2="0.005" y2="1.27" width="0.2032" layer="21"/>
@@ -8007,14 +8009,14 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <wire x1="-2.3" y1="13.8" x2="12.8" y2="13.8" width="0.127" layer="21" style="shortdash"/>
 <wire x1="12.8" y1="3.8" x2="6.7" y2="3.8" width="0.127" layer="21" style="shortdash"/>
 <wire x1="6.7" y1="3.8" x2="5.7" y2="2.8" width="0.127" layer="21" style="shortdash"/>
-<wire x1="14.85" y1="14.8" x2="0.85" y2="14.8" width="0.127" layer="21"/>
-<wire x1="0.85" y1="14.8" x2="0.85" y2="6" width="0.127" layer="21"/>
-<wire x1="0.85" y1="6" x2="0.05" y2="3" width="0.127" layer="21"/>
-<wire x1="0.05" y1="3" x2="0.05" y2="0" width="0.127" layer="21"/>
-<wire x1="0.05" y1="0" x2="13.4" y2="0" width="0.127" layer="21"/>
+<wire x1="14.85" y1="14.8" x2="0.85" y2="14.8" width="0.127" layer="51"/>
+<wire x1="0.85" y1="14.8" x2="0.85" y2="6" width="0.127" layer="51"/>
+<wire x1="0.85" y1="6" x2="0.05" y2="3" width="0.127" layer="51"/>
+<wire x1="0.05" y1="3" x2="0.05" y2="0" width="0.127" layer="51"/>
+<wire x1="0.05" y1="0" x2="13.4" y2="0" width="0.127" layer="51"/>
 <wire x1="13.4" y1="0" x2="13.4" y2="1.3" width="0.127" layer="21"/>
 <wire x1="13.4" y1="1.3" x2="14.85" y2="1.3" width="0.127" layer="21"/>
-<wire x1="14.85" y1="1.3" x2="14.85" y2="14.8" width="0.127" layer="21"/>
+<wire x1="14.85" y1="1.3" x2="14.85" y2="14.8" width="0.127" layer="51"/>
 <smd name="S1" x="4.75" y="-0.5" dx="1.4" dy="2" layer="1" rot="R90"/>
 <smd name="S2" x="4.75" y="15.3" dx="1.4" dy="2" layer="1" rot="R90"/>
 <smd name="S3" x="14.35" y="15.36" dx="1.28" dy="1.4" layer="1" rot="R90"/>
@@ -8034,6 +8036,14 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <wire x1="-3.9" y1="8.2" x2="-0.3" y2="8.2" width="0.127" layer="21"/>
 <wire x1="-0.2" y1="8.2" x2="-1" y2="9" width="0.127" layer="21"/>
 <wire x1="-0.2" y1="8.2" x2="-1" y2="7.4" width="0.127" layer="21"/>
+<wire x1="0.889" y1="14.859" x2="3.429" y2="14.859" width="0.127" layer="21"/>
+<wire x1="6.096" y1="14.859" x2="13.462" y2="14.859" width="0.127" layer="21"/>
+<wire x1="14.859" y1="4.572" x2="14.859" y2="1.651" width="0.127" layer="21"/>
+<wire x1="13.462" y1="0" x2="5.969" y2="0" width="0.127" layer="21"/>
+<wire x1="3.556" y1="0" x2="0" y2="0" width="0.127" layer="21"/>
+<wire x1="0" y1="0" x2="0" y2="2.921" width="0.127" layer="21"/>
+<wire x1="0.127" y1="2.921" x2="0.889" y2="5.969" width="0.127" layer="21"/>
+<wire x1="0.889" y1="5.969" x2="0.889" y2="14.859" width="0.127" layer="21"/>
 </package>
 <package name="PIN-HEADER-6PIN">
 <wire x1="1.905" y1="1.27" x2="3.175" y2="1.27" width="0.2032" layer="21"/>
@@ -8090,13 +8100,11 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <text x="-6.35" y="-2.667" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 </package>
 <package name="SOT23-8">
-<wire x1="1.3989" y1="0.7904" x2="1.3989" y2="-0.9304" width="0.1524" layer="51"/>
-<wire x1="1.3989" y1="-0.9304" x2="-1.4984" y2="-0.9304" width="0.1524" layer="51"/>
-<wire x1="-1.4984" y1="-0.9304" x2="-1.4984" y2="0.7904" width="0.1524" layer="51"/>
-<wire x1="-1.4984" y1="0.7904" x2="1.3989" y2="0.7904" width="0.1524" layer="51"/>
+<wire x1="1.2973" y1="-0.9304" x2="-1.4222" y2="-0.9304" width="0.127" layer="51"/>
+<wire x1="-1.4222" y1="0.765" x2="1.3735" y2="0.765" width="0.127" layer="51"/>
 <text x="-1.8785" y="1.935" size="0.85" layer="25">&gt;NAME</text>
 <text x="-1.8285" y="-3.095" size="0.85" layer="27">&gt;VALUE</text>
-<circle x="1.0265" y="0.38" radius="0.1" width="0.06" layer="21"/>
+<circle x="0.8995" y="0.253" radius="0.1" width="0.06" layer="21"/>
 <rectangle x1="-1.166" y1="-1.53" x2="-0.866" y2="-1.01" layer="51"/>
 <smd name="5" x="-1.0139" y="-1.27" dx="0.42" dy="1.3" layer="1"/>
 <rectangle x1="-0.516" y1="-1.53" x2="-0.216" y2="-1.01" layer="51"/>
@@ -8113,12 +8121,18 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <smd name="2" x="0.2861" y="1.08" dx="0.42" dy="1.3" layer="1"/>
 <rectangle x1="0.784" y1="0.82" x2="1.084" y2="1.34" layer="51"/>
 <smd name="1" x="0.9361" y="1.08" dx="0.42" dy="1.3" layer="1"/>
+<wire x1="-1.3716" y1="0.762" x2="-1.4986" y2="0.762" width="0.127" layer="21"/>
+<wire x1="-1.4986" y1="0.762" x2="-1.4986" y2="-0.9398" width="0.127" layer="21"/>
+<wire x1="-1.4986" y1="-0.9398" x2="-1.397" y2="-0.9398" width="0.127" layer="21"/>
+<wire x1="1.4224" y1="0.762" x2="1.4224" y2="-0.9398" width="0.127" layer="21"/>
+<wire x1="1.4224" y1="0.762" x2="1.2954" y2="0.762" width="0.127" layer="21"/>
+<wire x1="1.4224" y1="-0.9398" x2="1.2954" y2="-0.9398" width="0.127" layer="21"/>
 </package>
 <package name="ESP8266-12-2">
 <wire x1="-8.382" y1="-10.522" x2="7.818" y2="-10.522" width="0.127" layer="21"/>
-<wire x1="7.818" y1="-10.522" x2="7.818" y2="13.178" width="0.127" layer="21"/>
+<wire x1="7.818" y1="-9.506" x2="7.818" y2="5.558" width="0.127" layer="51"/>
 <wire x1="7.818" y1="13.178" x2="-8.382" y2="13.178" width="0.127" layer="21"/>
-<wire x1="-8.382" y1="13.178" x2="-8.382" y2="-10.522" width="0.127" layer="21"/>
+<wire x1="-8.382" y1="5.558" x2="-8.382" y2="-9.506" width="0.127" layer="51"/>
 <smd name="16" x="-8.382" y="-8.922" dx="2" dy="1.2" layer="1"/>
 <smd name="15" x="-8.382" y="-6.922" dx="2" dy="1.2" layer="1"/>
 <smd name="14" x="-8.382" y="-4.922" dx="2" dy="1.2" layer="1"/>
@@ -8136,10 +8150,28 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <smd name="7" x="7.818" y="3.078" dx="2" dy="1.2" layer="1"/>
 <smd name="8" x="7.818" y="5.078" dx="2" dy="1.2" layer="1"/>
 <text x="-4.382" y="-7.922" size="1.27" layer="21" rot="R90">&gt;NAME</text>
-<text x="-3.382" y="9.078" size="1.27" layer="21">ESP-12</text>
+<text x="-3.128" y="9.332" size="1.27" layer="21">ESP-12</text>
 <rectangle x1="-6.35" y1="7.3" x2="5.76" y2="12.7" layer="39"/>
+<wire x1="-8.382" y1="13.208" x2="-8.382" y2="5.842" width="0.127" layer="21"/>
+<wire x1="7.747" y1="13.208" x2="7.747" y2="5.842" width="0.127" layer="21"/>
+<wire x1="7.874" y1="-10.541" x2="7.874" y2="-9.779" width="0.127" layer="21"/>
+<wire x1="-8.382" y1="-10.541" x2="-8.382" y2="-9.779" width="0.127" layer="21"/>
 </package>
 <package name="SMD0805">
+<wire x1="-0.283" y1="0.635" x2="0.283" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-0.283" y1="-0.635" x2="0.283" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-1.973" y1="0.983" x2="1.973" y2="0.983" width="0.0508" layer="39"/>
+<wire x1="1.973" y1="0.983" x2="1.973" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="1.973" y1="-0.983" x2="-1.973" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="-1.973" y1="-0.983" x2="-1.973" y2="0.983" width="0.0508" layer="39"/>
+<smd name="1" x="-1" y="0" dx="1.1" dy="1.4" layer="1"/>
+<smd name="2" x="1" y="0" dx="1.1" dy="1.4" layer="1"/>
+<text x="-0.762" y="1.016" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.762" y="-2.286" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="0.4064" y1="-0.6985" x2="1.0564" y2="0.7015" layer="51"/>
+<rectangle x1="-1.0668" y1="-0.6985" x2="-0.4168" y2="0.7015" layer="51"/>
+</package>
+<package name="SMD0805@1">
 <wire x1="-0.41" y1="0.635" x2="0.41" y2="0.635" width="0.1524" layer="51"/>
 <wire x1="-0.41" y1="-0.635" x2="0.41" y2="-0.635" width="0.1524" layer="51"/>
 <wire x1="-1.973" y1="0.983" x2="1.973" y2="0.983" width="0.0508" layer="39"/>
@@ -8153,7 +8185,7 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <rectangle x1="0.4064" y1="-0.6985" x2="1.0564" y2="0.7015" layer="21"/>
 <rectangle x1="-1.0668" y1="-0.6985" x2="-0.4168" y2="0.7015" layer="21"/>
 </package>
-<package name="SMD1206">
+<package name="SMD1206@1">
 <wire x1="0.9525" y1="-0.8128" x2="-0.9652" y2="-0.8128" width="0.1524" layer="51"/>
 <wire x1="0.9525" y1="0.8128" x2="-0.9652" y2="0.8128" width="0.1524" layer="51"/>
 <wire x1="-2.473" y1="0.983" x2="2.473" y2="0.983" width="0.0508" layer="39"/>
@@ -8172,6 +8204,20 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <smd name="2" x="1.05" y="0" dx="1.2" dy="3" layer="1" cream="no"/>
 <text x="-0.908" y="1.27" size="0.4064" layer="25">&gt;NAME</text>
 <text x="-0.908" y="-1.651" size="0.4064" layer="27">&gt;VALUE</text>
+</package>
+<package name="SMD1206">
+<wire x1="0.4445" y1="-0.8128" x2="-0.4572" y2="-0.8128" width="0.1524" layer="21"/>
+<wire x1="0.4445" y1="0.8128" x2="-0.4572" y2="0.8128" width="0.1524" layer="21"/>
+<wire x1="-2.473" y1="0.983" x2="2.473" y2="0.983" width="0.0508" layer="39"/>
+<wire x1="2.473" y1="0.983" x2="2.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="2.473" y1="-0.983" x2="-2.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="-2.473" y1="-0.983" x2="-2.473" y2="0.983" width="0.0508" layer="39"/>
+<smd name="2" x="1.422" y="0" dx="1.6" dy="1.803" layer="1"/>
+<smd name="1" x="-1.422" y="0" dx="1.6" dy="1.803" layer="1"/>
+<text x="-1.397" y="1.143" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.397" y="-2.413" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.6891" y1="-0.8763" x2="-0.9525" y2="0.8763" layer="51"/>
+<rectangle x1="0.9525" y1="-0.8763" x2="1.6891" y2="0.8763" layer="51"/>
 </package>
 </packages>
 <symbols>
@@ -8586,7 +8632,7 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <gate name="G$1" symbol="CAPACITOR" x="0" y="0"/>
 </gates>
 <devices>
-<device name="0805" package="SMD0805">
+<device name="0805" package="SMD0805@1">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -8595,7 +8641,7 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <technology name=""/>
 </technologies>
 </device>
-<device name="1206" package="SMD1206">
+<device name="1206" package="SMD1206@1">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
