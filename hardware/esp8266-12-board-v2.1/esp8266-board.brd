@@ -16,8 +16,8 @@
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
@@ -32,10 +32,10 @@
 <layer number="36" name="bGlue" color="7" fill="5" visible="yes" active="yes"/>
 <layer number="37" name="tTest" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
-<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
-<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
-<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
@@ -44,8 +44,8 @@
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
@@ -144,19 +144,35 @@
 <wire x1="32.85" y1="0" x2="32.85" y2="31.4" width="0" layer="20"/>
 <wire x1="32.85" y1="31.4" x2="0" y2="31.4" width="0" layer="20"/>
 <wire x1="0" y1="31.4" x2="0" y2="0" width="0" layer="20"/>
-<text x="11" y="0.7" size="0.5" layer="1" font="vector" ratio="12">STUTZTHINGS 2016 ESP BOARD V2.1</text>
-<hole x="4.3" y="10.1" drill="0.6"/>
-<hole x="8" y="7.5" drill="0.9"/>
-<hole x="4.2" y="7.5" drill="0.6"/>
-<hole x="4" y="20.9" drill="0.6"/>
-<hole x="5.8" y="20.9" drill="0.6"/>
-<hole x="6" y="29.5" drill="0.9"/>
-<hole x="4.6" y="26.9" drill="0.8"/>
-<hole x="7.1" y="26.9" drill="0.8"/>
-<text x="24.6" y="0.8" size="0.5" layer="16" font="vector" ratio="12" rot="MR0">STUTZTHINGS 2016 ESP BOARD V2.1</text>
-<hole x="27.9" y="27.5" drill="0.8"/>
-<hole x="27.9" y="29.95" drill="0.8"/>
+<text x="12.1" y="0.75" size="0.8128" layer="1" font="vector" ratio="12">STUTZTHINGS 2016 
+ ESP BOARD V2.1</text>
+<hole x="7.85" y="7.35" drill="1.3"/>
+<hole x="9.7" y="4.9" drill="1.3"/>
+<text x="23.65" y="0.8" size="0.8128" layer="16" font="vector" ratio="12" rot="MR0">STUTZTHINGS 2016 
+ ESP BOARD V2.1</text>
 <rectangle x1="12.1" y1="0.85" x2="24.1" y2="6.25" layer="42"/>
+<hole x="3.85" y="20.9" drill="1.3"/>
+<hole x="7.4" y="26.35" drill="1.3"/>
+<hole x="5.05" y="30.3" drill="1.3"/>
+<hole x="8.75" y="30.3" drill="1.3"/>
+<hole x="5.85" y="23.7" drill="1.3"/>
+<hole x="27.9" y="25.65" drill="1.3"/>
+<hole x="27.6" y="30.25" drill="1.3"/>
+<text x="1.05" y="5.45" size="0.8128" layer="25" rot="R90">IO2</text>
+<text x="1.05" y="7.95" size="0.8128" layer="25" rot="R90">IO5</text>
+<text x="1.1" y="10.6" size="0.8128" layer="25" rot="R90">TX</text>
+<text x="1.05" y="13.05" size="0.8128" layer="25" rot="R90">RX</text>
+<text x="1.05" y="15.05" size="0.8128" layer="25" rot="R90">GND</text>
+<text x="1" y="17.8" size="0.8128" layer="25" rot="R90">+3.3V</text>
+<text x="8.55" y="6.2" size="0.6096" layer="25">GND</text>
+<text x="9.3" y="3.35" size="0.6096" layer="25" rot="R270">+3.3V</text>
+<text x="16.3" y="31.05" size="0.8128" layer="25" rot="R180">GND</text>
+<text x="19" y="31.05" size="0.8128" layer="25" rot="R180">DTR</text>
+<text x="21.5" y="31.05" size="0.8128" layer="25" rot="R180">RTS</text>
+<text x="23.6" y="31.05" size="0.8128" layer="25" rot="R180">RX</text>
+<text x="25.9" y="31.05" size="0.8128" layer="25" rot="R180">TX</text>
+<text x="1.05" y="23.65" size="0.8128" layer="25" rot="R90">+3.3V</text>
+<text x="1.05" y="21" size="0.8128" layer="25" rot="R90">GND</text>
 </plain>
 <libraries>
 <library name="rcl">
@@ -1247,45 +1263,31 @@ grid 2.54 mm, diameter 6 mm</description>
 <rectangle x1="0.4064" y1="-0.6985" x2="1.0564" y2="0.7015" layer="51"/>
 <rectangle x1="-1.0668" y1="-0.6985" x2="-0.4168" y2="0.7015" layer="51"/>
 </package>
-<package name="SMD0805@1">
-<wire x1="-0.41" y1="0.635" x2="0.41" y2="0.635" width="0.1524" layer="51"/>
-<wire x1="-0.41" y1="-0.635" x2="0.41" y2="-0.635" width="0.1524" layer="51"/>
-<wire x1="-1.973" y1="0.983" x2="1.973" y2="0.983" width="0.0508" layer="39"/>
-<wire x1="1.973" y1="0.983" x2="1.973" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="1.973" y1="-0.983" x2="-1.973" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="-1.973" y1="-0.983" x2="-1.973" y2="0.983" width="0.0508" layer="39"/>
-<smd name="1" x="-1" y="0" dx="1.1" dy="1.4" layer="1"/>
-<smd name="2" x="1" y="0" dx="1.1" dy="1.4" layer="1"/>
-<text x="-0.762" y="1.016" size="1.27" layer="25">&gt;NAME</text>
-<text x="-0.762" y="-2.286" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="0.4064" y1="-0.6985" x2="1.0564" y2="0.7015" layer="21"/>
-<rectangle x1="-1.0668" y1="-0.6985" x2="-0.4168" y2="0.7015" layer="21"/>
-</package>
 <package name="JUMPER-PAD-2-ROUND">
-<smd name="1" x="-1.27" y="0" dx="0.3048" dy="0.1524" layer="1" roundness="20" rot="R270" stop="no" thermals="no" cream="no"/>
-<smd name="2" x="1.27" y="0" dx="0.3048" dy="0.1524" layer="1" roundness="20" rot="R90" stop="no" thermals="no" cream="no"/>
+<smd name="1" x="-1.016" y="0.0508" dx="0.3048" dy="0.1524" layer="1" roundness="20" rot="R270" stop="no" thermals="no" cream="no"/>
+<smd name="2" x="1.0668" y="0" dx="0.3048" dy="0.1524" layer="1" roundness="20" rot="R90" stop="no" thermals="no" cream="no"/>
 <text x="-2.8575" y="1.2827" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-3.2004" y="-2.4003" size="1.27" layer="27">&gt;VALUE</text>
 <polygon width="0.00508125" layer="1">
-<vertex x="0.351125" y="-0.66875" curve="85"/>
-<vertex x="1.441125" y="0.03" curve="85"/>
-<vertex x="0.351125" y="0.66875"/>
+<vertex x="0.198725" y="-0.66875" curve="85"/>
+<vertex x="1.237925" y="0.03" curve="85"/>
+<vertex x="0.198725" y="0.66875"/>
 </polygon>
 <polygon width="0.00508125" layer="1">
-<vertex x="-0.351125" y="0.66875"/>
-<vertex x="-0.351125" y="-0.66875" curve="-85"/>
-<vertex x="-1.451125" y="0.04" curve="-85"/>
+<vertex x="-0.198725" y="0.66875"/>
+<vertex x="-0.198725" y="-0.66875" curve="-85"/>
+<vertex x="-1.197125" y="0.04" curve="-85"/>
 </polygon>
 <polygon width="0.2032" layer="29">
 <vertex x="-0.09" y="0.51875" curve="-90"/>
-<vertex x="1.45875" y="0.01" curve="-90"/>
+<vertex x="1.20475" y="0.0608" curve="-90"/>
 <vertex x="-0.01" y="-0.58875" curve="-90"/>
-<vertex x="-1.45875" y="0.06" curve="-90"/>
+<vertex x="-1.15395" y="0.06" curve="-90"/>
 </polygon>
-<wire x1="-1.53" y1="-0.76" x2="-1.53" y2="0.78" width="0.127" layer="51"/>
-<wire x1="-1.53" y1="0.78" x2="1.57" y2="0.78" width="0.127" layer="51"/>
-<wire x1="1.57" y1="0.78" x2="1.57" y2="-0.76" width="0.127" layer="51"/>
-<wire x1="1.57" y1="-0.76" x2="-1.53" y2="-0.76" width="0.127" layer="51"/>
+<wire x1="-1.3268" y1="-0.76" x2="-1.3268" y2="0.78" width="0.127" layer="51"/>
+<wire x1="-1.3268" y1="0.78" x2="1.3668" y2="0.78" width="0.127" layer="51"/>
+<wire x1="1.3668" y1="0.78" x2="1.3668" y2="-0.76" width="0.127" layer="51"/>
+<wire x1="1.3668" y1="-0.76" x2="-1.3268" y2="-0.76" width="0.127" layer="51"/>
 <wire x1="-0.381" y1="0.762" x2="0.381" y2="0.762" width="0.127" layer="21"/>
 <wire x1="-0.381" y1="-0.762" x2="0.381" y2="-0.762" width="0.127" layer="21"/>
 </package>
@@ -1721,16 +1723,13 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="P3" library="stutz-components-library" package="PIN-HEADER-5PIN" value="GND DTR RTS  RX   TX" x="20.1275" y="28.6025" smashed="yes">
-<attribute name="VALUE" x="13.8175" y="30.2355" size="0.8" layer="27" ratio="10"/>
-</element>
+<element name="P3" library="stutz-components-library" package="PIN-HEADER-5PIN" value="GND DTR RTS  RX   TX" x="20.1275" y="28.6025" smashed="yes"/>
 <element name="POWER" library="stutz-components-library" package="PIN-HEADER-2PIN" value="GND +3.3V" x="2.64" y="23.693" smashed="yes" rot="R270">
 <attribute name="NAME" x="4.218" y="25.8125" size="0.8" layer="25" ratio="10" rot="R270"/>
-<attribute name="VALUE" x="0.227" y="26.673" size="0.8" layer="27" ratio="10" rot="R270"/>
 </element>
-<element name="C1" library="stutz-components-library" package="SMD0805@1" value="0.1uF" x="7.4075" y="23.6625" smashed="yes" rot="R270">
-<attribute name="NAME" x="6.7865" y="25.4315" size="0.7" layer="25" ratio="10"/>
-<attribute name="VALUE" x="5.6635" y="23.8635" size="0.7" layer="27" ratio="10" rot="R270"/>
+<element name="C1" library="stutz-components-library" package="SMD0805" value="100nF" x="7.4075" y="23.6625" smashed="yes" rot="R270">
+<attribute name="NAME" x="6.8865" y="23.3315" size="0.7" layer="25" ratio="10"/>
+<attribute name="VALUE" x="5.5365" y="21.3135" size="0.7" layer="27" ratio="10"/>
 </element>
 <element name="E1" library="stutz-components-library" package="ESP8266-12-2" value="ESP8266-12-2" x="17.8" y="13.3" rot="R180"/>
 <element name="R2" library="stutz-components-library" package="SMD0805" value="3.3k" x="7.4" y="10.7" smashed="yes" rot="R90">
@@ -1784,7 +1783,6 @@ design rules under a new name.</description>
 <element name="SD" library="stutz-components-library" package="MICROSD-TRANSFLASH" value="MICROSD-TRANSFLASH" x="10" y="5.7" rot="MR90"/>
 <element name="EXTERNAL" library="stutz-components-library" package="PIN-HEADER-6PIN" value="IO2   IO5  TX   RX  GND +3.3V" x="2.6" y="13.9" smashed="yes" rot="R270">
 <attribute name="NAME" x="4.051" y="17.05" size="0.9" layer="25" ratio="10" rot="R270"/>
-<attribute name="VALUE" x="0.233" y="20.55" size="0.8" layer="27" ratio="10" rot="R270"/>
 </element>
 <element name="R11" library="stutz-components-library" package="SMD0805" value="350" x="7.4" y="12.7" smashed="yes" rot="MR270">
 <attribute name="NAME" x="6.384" y="13.362" size="0.7" layer="26" rot="MR270"/>
@@ -1802,9 +1800,9 @@ design rules under a new name.</description>
 <attribute name="NAME" x="31.5575" y="15.0775" size="0.7" layer="25" ratio="10" rot="R180"/>
 <attribute name="VALUE" x="32.6925" y="14.275" size="0.6" layer="27" rot="R90"/>
 </element>
-<element name="C3" library="stutz-components-library" package="SMD0805@1" value="1uF" x="7.4" y="23.7" smashed="yes" rot="MR270">
+<element name="C3" library="stutz-components-library" package="SMD0805" value="1uF" x="7.4" y="23.7" smashed="yes" rot="MR270">
 <attribute name="MPN" value="" x="7.4" y="23.7" size="1.778" layer="28" rot="MR270" display="off"/>
-<attribute name="NAME" x="6.484" y="25.262" size="0.7" layer="26" rot="MR270"/>
+<attribute name="NAME" x="6.534" y="25.712" size="0.7" layer="26" rot="MR270"/>
 <attribute name="VALUE" x="9.186" y="24.612" size="0.7" layer="28" rot="MR270"/>
 </element>
 <element name="R13" library="stutz-components-library" package="SMD0805" value="350" x="26.4" y="16.9" smashed="yes" rot="MR90">
@@ -1815,12 +1813,10 @@ design rules under a new name.</description>
 <attribute name="NAME" x="6.334" y="14.338" size="0.7" layer="25" rot="R90"/>
 <attribute name="VALUE" x="8.886" y="14.288" size="0.7" layer="27" rot="R90"/>
 </element>
-<element name="OUTPWR" library="stutz-components-library" package="PIN-HEADER-2PIN" value="+3.3V GND" x="7.8" y="3.55" smashed="yes" rot="R90">
-<attribute name="VALUE" x="9.867" y="0.76" size="0.7" layer="27" ratio="10" rot="R90"/>
-</element>
+<element name="OUTPWR" library="stutz-components-library" package="PIN-HEADER-2PIN" value="+3.3V GND" x="7.8" y="3.55" smashed="yes" rot="R90"/>
 <element name="R15" library="stutz-components-library" package="SMD0805" value="3.3k" x="31.3" y="21.5" smashed="yes" rot="R90">
-<attribute name="NAME" x="32.834" y="19.338" size="0.7" layer="25" rot="R90"/>
-<attribute name="VALUE" x="32.786" y="21.588" size="0.7" layer="27" rot="R90"/>
+<attribute name="NAME" x="32.784" y="19.588" size="0.7" layer="25" rot="R90"/>
+<attribute name="VALUE" x="32.136" y="23.138" size="0.7" layer="27" rot="R90"/>
 </element>
 <element name="R16" library="stutz-components-library" package="SMD0805" value="350" x="5.3" y="2.8" smashed="yes" rot="MR90">
 <attribute name="NAME" x="7.262" y="0.016" size="0.7" layer="26" rot="MR0"/>
@@ -2017,7 +2013,7 @@ design rules under a new name.</description>
 <wire x1="7.479" y1="24.653" x2="7.4" y2="24.7" width="0.3" layer="16"/>
 <wire x1="29.2235" y1="20.498" x2="30.40075" y2="19.32075" width="0.3" layer="1"/>
 <wire x1="30.40075" y1="19.32075" x2="31.024" y2="18.6975" width="0.3" layer="1"/>
-<wire x1="31.024" y1="18.6975" x2="31.1" y2="18.07" width="0.3" layer="1"/>
+<wire x1="31.024" y1="18.6975" x2="31.1" y2="17.8668" width="0.3" layer="1"/>
 <wire x1="29.2235" y1="20.498" x2="29.2" y2="20.5" width="0.3" layer="1"/>
 <wire x1="27.5615" y1="22.16" x2="26.315" y2="22.16" width="0.3" layer="1"/>
 <wire x1="29.085" y1="20.6365" x2="27.5615" y2="22.16" width="0.3" layer="1"/>
@@ -2103,10 +2099,11 @@ design rules under a new name.</description>
 <wire x1="24.4" y1="2.6075" x2="24.4" y2="6.1" width="0.3" layer="1"/>
 <wire x1="24.4" y1="6.1" x2="24" y2="6.5" width="0.3" layer="1"/>
 <wire x1="24" y1="6.5" x2="15.18995" y2="6.5" width="0.3" layer="1"/>
-<wire x1="15.18995" y1="6.5" x2="13.5" y2="5.8" width="0.3" layer="1" curve="45"/>
-<wire x1="13.5" y1="5.8" x2="11.7" y2="5.8" width="0.3" layer="1"/>
-<wire x1="11.7" y1="5.8" x2="8.03" y2="2.13" width="0.3" layer="1"/>
 <wire x1="8.03" y1="2.13" x2="7.8" y2="2.28" width="0.3" layer="1"/>
+<wire x1="15.18995" y1="6.5" x2="15.18995" y2="6.48995" width="0.3048" layer="1"/>
+<wire x1="15.18995" y1="6.48995" x2="11.05" y2="2.35" width="0.3048" layer="1"/>
+<wire x1="11.05" y1="2.35" x2="7.87" y2="2.35" width="0.3048" layer="1"/>
+<wire x1="7.87" y1="2.35" x2="7.8" y2="2.28" width="0.3048" layer="1"/>
 </signal>
 <signal name="ESP_TX">
 <contactref element="E1" pad="8"/>
@@ -2140,8 +2137,8 @@ design rules under a new name.</description>
 <wire x1="9.972" y1="18.282" x2="9.982" y2="18.222" width="0.254" layer="1"/>
 <wire x1="6.925" y1="18.4205" x2="7.3405" y2="18.4205" width="0.254" layer="1"/>
 <wire x1="5.217" y1="17.9125" x2="6.925" y2="18.4205" width="0.254" layer="1"/>
-<wire x1="4.217" y1="15.8195" x2="5.217" y2="17.9125" width="0.254" layer="16"/>
-<wire x1="4.2475" y1="13.85" x2="4.217" y2="15.8195" width="0.254" layer="16"/>
+<wire x1="4.267" y1="16.9695" x2="5.217" y2="17.9125" width="0.254" layer="16"/>
+<wire x1="4.2475" y1="13.85" x2="4.267" y2="16.9695" width="0.254" layer="16"/>
 <wire x1="4.2475" y1="12.0955" x2="4.2475" y2="13.85" width="0.254" layer="16"/>
 <wire x1="5.6785" y1="10.6645" x2="4.2475" y2="12.0955" width="0.254" layer="16"/>
 <wire x1="5.6785" y1="7.0635" x2="5.6785" y2="10.6645" width="0.254" layer="16"/>
@@ -2309,11 +2306,7 @@ design rules under a new name.</description>
 <wire x1="2.6" y1="8.82" x2="4.68" y2="8.82" width="0.254" layer="16"/>
 <wire x1="4.68" y1="8.82" x2="4.8" y2="8.8" width="0.254" layer="16"/>
 <via x="4.8" y="8.8" extent="1-16" drill="0.4"/>
-<wire x1="4.8" y1="8.8" x2="5.1" y2="8.8" width="0.254" layer="1"/>
-<wire x1="5.1" y1="8.8" x2="7.4" y2="6.5" width="0.254" layer="1"/>
-<wire x1="7.4" y1="6.5" x2="13.1" y2="6.5" width="0.254" layer="1"/>
-<wire x1="13.1" y1="6.5" x2="16.4" y2="9.8" width="0.254" layer="1"/>
-<wire x1="16.4" y1="9.8" x2="16.4" y2="11.023" width="0.254" layer="1"/>
+<wire x1="16.4" y1="9.3" x2="16.4" y2="11.023" width="0.254" layer="1"/>
 <wire x1="16.4" y1="11.023" x2="14.8195" y2="12.6035" width="0.254" layer="1"/>
 <wire x1="24.7605" y1="23.9605" x2="24.1" y2="23.3" width="0.254" layer="1"/>
 <wire x1="24.1" y1="23.3" x2="24.1" y2="21.1" width="0.254" layer="1"/>
@@ -2324,7 +2317,12 @@ design rules under a new name.</description>
 <wire x1="27.572" y1="23.95" x2="28.022" y2="24.4" width="0.256" layer="1"/>
 <wire x1="28.022" y1="24.4" x2="31.05" y2="24.4" width="0.256" layer="1"/>
 <wire x1="31.05" y1="24.4" x2="31.67" y2="25.02" width="0.256" layer="1"/>
-<wire x1="31.67" y1="25.02" x2="31.67" y2="25.6" width="0.256" layer="1"/>
+<wire x1="31.67" y1="25.02" x2="31.416" y2="25.5492" width="0.256" layer="1"/>
+<wire x1="16.4" y1="9.3" x2="13.35" y2="6.25" width="0.254" layer="1"/>
+<wire x1="13.35" y1="6.25" x2="7.15" y2="6.25" width="0.254" layer="1"/>
+<wire x1="7.15" y1="6.25" x2="5.1" y2="8.3" width="0.254" layer="1"/>
+<wire x1="5.1" y1="8.3" x2="5.1" y2="8.5" width="0.254" layer="1"/>
+<wire x1="5.1" y1="8.5" x2="4.8" y2="8.8" width="0.254" layer="1"/>
 </signal>
 <signal name="ESP_GPIO4">
 <contactref element="E1" pad="5"/>
@@ -2419,7 +2417,7 @@ design rules under a new name.</description>
 <wire x1="30.7" y1="8.2" x2="30.7" y2="8" width="0.254" layer="1"/>
 <wire x1="30.7" y1="8" x2="31.7" y2="9" width="0.254" layer="1"/>
 <wire x1="31.7" y1="9" x2="31.7" y2="15.53" width="0.254" layer="1"/>
-<wire x1="31.7" y1="15.53" x2="31.1" y2="15.53" width="0.254" layer="1"/>
+<wire x1="31.7" y1="15.53" x2="31.0492" y2="15.784" width="0.254" layer="1"/>
 <contactref element="R15" pad="1"/>
 <wire x1="31.3605" y1="19.1475" x2="31.3605" y2="20.493" width="0.254" layer="1"/>
 <wire x1="32.1885" y1="18.3195" x2="31.3605" y2="19.1475" width="0.254" layer="1"/>
@@ -2433,11 +2431,15 @@ design rules under a new name.</description>
 <contactref element="J1" pad="2"/>
 <wire x1="21.883" y1="24.5145" x2="23.4835" y2="26.315" width="0.254" layer="16"/>
 <wire x1="21.883" y1="24.2375" x2="21.883" y2="24.5145" width="0.254" layer="16"/>
-<wire x1="29.2625" y1="25.615" x2="29.13" y2="25.6" width="0.254" layer="1"/>
+<wire x1="29.2625" y1="25.615" x2="29.3332" y2="25.6" width="0.254" layer="1"/>
 <wire x1="21.883" y1="24.2375" x2="21.8" y2="24.6" width="0.254" layer="16"/>
 <via x="23.4835" y="26.315" extent="1-16" drill="0.4"/>
-<wire x1="29.2625" y1="25.615" x2="28.5625" y2="26.315" width="0.3" layer="1"/>
-<wire x1="28.5625" y1="26.315" x2="23.4835" y2="26.315" width="0.3" layer="1"/>
+<wire x1="29.2625" y1="25.615" x2="29.2625" y2="26.4375" width="0.254" layer="1"/>
+<wire x1="29.2625" y1="26.4375" x2="28.65" y2="27.05" width="0.254" layer="1"/>
+<wire x1="28.65" y1="27.05" x2="27.1" y2="27.05" width="0.254" layer="1"/>
+<wire x1="27.1" y1="27.05" x2="26.35" y2="26.3" width="0.254" layer="1"/>
+<wire x1="26.35" y1="26.3" x2="23.4985" y2="26.3" width="0.254" layer="1"/>
+<wire x1="23.4985" y1="26.3" x2="23.4835" y2="26.315" width="0.254" layer="1"/>
 </signal>
 <signal name="RX_PROT">
 <contactref element="EXTERNAL" pad="3"/>
@@ -2453,16 +2455,17 @@ design rules under a new name.</description>
 <wire x1="2.5875" y1="13.869" x2="2.6" y2="13.9" width="0.254" layer="16"/>
 <wire x1="21.8385" y1="28.6695" x2="22.6665" y2="28.6695" width="0.254" layer="1"/>
 <wire x1="20.5965" y1="29.9115" x2="21.8385" y2="28.6695" width="0.254" layer="1"/>
-<wire x1="7.659" y1="29.9115" x2="20.5965" y2="29.9115" width="0.254" layer="1"/>
-<wire x1="5.4855" y1="27.738" x2="7.659" y2="29.9115" width="0.254" layer="1"/>
-<wire x1="3.8295" y1="27.738" x2="5.4855" y2="27.738" width="0.254" layer="1"/>
-<wire x1="2.3805" y1="26.289" x2="3.8295" y2="27.738" width="0.254" layer="1"/>
-<wire x1="1.5525" y1="26.289" x2="2.3805" y2="26.289" width="0.254" layer="1"/>
-<wire x1="1.242" y1="25.9785" x2="1.5525" y2="26.289" width="0.254" layer="1"/>
+<wire x1="9.959" y1="29.9115" x2="20.5965" y2="29.9115" width="0.254" layer="1"/>
+<wire x1="1.242" y1="25.9785" x2="1.5635" y2="26.3" width="0.254" layer="1"/>
 <wire x1="1.242" y1="15.318" x2="1.242" y2="25.9785" width="0.254" layer="1"/>
 <wire x1="2.5875" y1="13.9725" x2="1.242" y2="15.318" width="0.254" layer="1"/>
 <wire x1="22.6665" y1="28.6695" x2="22.6675" y2="28.6025" width="0.254" layer="1"/>
 <wire x1="2.5875" y1="13.9725" x2="2.6" y2="13.9" width="0.254" layer="1"/>
+<wire x1="9.959" y1="29.9115" x2="9.959" y2="29.909" width="0.254" layer="1"/>
+<wire x1="9.959" y1="29.909" x2="7.55" y2="27.5" width="0.254" layer="1"/>
+<wire x1="7.55" y1="27.5" x2="6.9" y2="27.5" width="0.254" layer="1"/>
+<wire x1="6.9" y1="27.5" x2="5.7" y2="26.3" width="0.254" layer="1"/>
+<wire x1="5.7" y1="26.3" x2="1.5635" y2="26.3" width="0.254" layer="1"/>
 </signal>
 <signal name="TX_PROT">
 <contactref element="EXTERNAL" pad="4"/>
@@ -2570,4 +2573,10 @@ design rules under a new name.</description>
 </errors>
 </board>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>

@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -7907,30 +7907,30 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <wire x1="-1.27" y1="0" x2="1.27" y2="0" width="0.127" layer="21"/>
 </package>
 <package name="JUMPER-PAD-2-ROUND">
-<smd name="1" x="-1.27" y="0" dx="0.3048" dy="0.1524" layer="1" roundness="20" rot="R270" stop="no" thermals="no" cream="no"/>
-<smd name="2" x="1.27" y="0" dx="0.3048" dy="0.1524" layer="1" roundness="20" rot="R90" stop="no" thermals="no" cream="no"/>
+<smd name="1" x="-1.016" y="0.0508" dx="0.3048" dy="0.1524" layer="1" roundness="20" rot="R270" stop="no" thermals="no" cream="no"/>
+<smd name="2" x="1.0668" y="0" dx="0.3048" dy="0.1524" layer="1" roundness="20" rot="R90" stop="no" thermals="no" cream="no"/>
 <text x="-2.8575" y="1.2827" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-3.2004" y="-2.4003" size="1.27" layer="27">&gt;VALUE</text>
 <polygon width="0.00508125" layer="1">
-<vertex x="0.351125" y="-0.66875" curve="85"/>
-<vertex x="1.441125" y="0.03" curve="85"/>
-<vertex x="0.351125" y="0.66875"/>
+<vertex x="0.198725" y="-0.66875" curve="85"/>
+<vertex x="1.237925" y="0.03" curve="85"/>
+<vertex x="0.198725" y="0.66875"/>
 </polygon>
 <polygon width="0.00508125" layer="1">
-<vertex x="-0.351125" y="0.66875"/>
-<vertex x="-0.351125" y="-0.66875" curve="-85"/>
-<vertex x="-1.451125" y="0.04" curve="-85"/>
+<vertex x="-0.198725" y="0.66875"/>
+<vertex x="-0.198725" y="-0.66875" curve="-85"/>
+<vertex x="-1.197125" y="0.04" curve="-85"/>
 </polygon>
 <polygon width="0.2032" layer="29">
 <vertex x="-0.09" y="0.51875" curve="-90"/>
-<vertex x="1.45875" y="0.01" curve="-90"/>
+<vertex x="1.20475" y="0.0608" curve="-90"/>
 <vertex x="-0.01" y="-0.58875" curve="-90"/>
-<vertex x="-1.45875" y="0.06" curve="-90"/>
+<vertex x="-1.15395" y="0.06" curve="-90"/>
 </polygon>
-<wire x1="-1.53" y1="-0.76" x2="-1.53" y2="0.78" width="0.127" layer="51"/>
-<wire x1="-1.53" y1="0.78" x2="1.57" y2="0.78" width="0.127" layer="51"/>
-<wire x1="1.57" y1="0.78" x2="1.57" y2="-0.76" width="0.127" layer="51"/>
-<wire x1="1.57" y1="-0.76" x2="-1.53" y2="-0.76" width="0.127" layer="51"/>
+<wire x1="-1.3268" y1="-0.76" x2="-1.3268" y2="0.78" width="0.127" layer="51"/>
+<wire x1="-1.3268" y1="0.78" x2="1.3668" y2="0.78" width="0.127" layer="51"/>
+<wire x1="1.3668" y1="0.78" x2="1.3668" y2="-0.76" width="0.127" layer="51"/>
+<wire x1="1.3668" y1="-0.76" x2="-1.3268" y2="-0.76" width="0.127" layer="51"/>
 <wire x1="-0.381" y1="0.762" x2="0.381" y2="0.762" width="0.127" layer="21"/>
 <wire x1="-0.381" y1="-0.762" x2="0.381" y2="-0.762" width="0.127" layer="21"/>
 </package>
@@ -8170,34 +8170,6 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <text x="-0.762" y="-2.286" size="1.27" layer="27">&gt;VALUE</text>
 <rectangle x1="0.4064" y1="-0.6985" x2="1.0564" y2="0.7015" layer="51"/>
 <rectangle x1="-1.0668" y1="-0.6985" x2="-0.4168" y2="0.7015" layer="51"/>
-</package>
-<package name="SMD0805@1">
-<wire x1="-0.41" y1="0.635" x2="0.41" y2="0.635" width="0.1524" layer="51"/>
-<wire x1="-0.41" y1="-0.635" x2="0.41" y2="-0.635" width="0.1524" layer="51"/>
-<wire x1="-1.973" y1="0.983" x2="1.973" y2="0.983" width="0.0508" layer="39"/>
-<wire x1="1.973" y1="0.983" x2="1.973" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="1.973" y1="-0.983" x2="-1.973" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="-1.973" y1="-0.983" x2="-1.973" y2="0.983" width="0.0508" layer="39"/>
-<smd name="1" x="-1" y="0" dx="1.1" dy="1.4" layer="1"/>
-<smd name="2" x="1" y="0" dx="1.1" dy="1.4" layer="1"/>
-<text x="-0.762" y="1.016" size="1.27" layer="25">&gt;NAME</text>
-<text x="-0.762" y="-2.286" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="0.4064" y1="-0.6985" x2="1.0564" y2="0.7015" layer="21"/>
-<rectangle x1="-1.0668" y1="-0.6985" x2="-0.4168" y2="0.7015" layer="21"/>
-</package>
-<package name="SMD1206@1">
-<wire x1="0.9525" y1="-0.8128" x2="-0.9652" y2="-0.8128" width="0.1524" layer="51"/>
-<wire x1="0.9525" y1="0.8128" x2="-0.9652" y2="0.8128" width="0.1524" layer="51"/>
-<wire x1="-2.473" y1="0.983" x2="2.473" y2="0.983" width="0.0508" layer="39"/>
-<wire x1="2.473" y1="0.983" x2="2.473" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="2.473" y1="-0.983" x2="-2.473" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="-2.473" y1="-0.983" x2="-2.473" y2="0.983" width="0.0508" layer="39"/>
-<smd name="2" x="1.422" y="0" dx="1.6" dy="1.803" layer="1"/>
-<smd name="1" x="-1.422" y="0" dx="1.6" dy="1.803" layer="1"/>
-<text x="-1.397" y="1.143" size="1.27" layer="25">&gt;NAME</text>
-<text x="-1.397" y="-2.413" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-1.6891" y1="-0.8763" x2="-0.9525" y2="0.8763" layer="51"/>
-<rectangle x1="0.9525" y1="-0.8763" x2="1.6891" y2="0.8763" layer="51"/>
 </package>
 <package name="JUMPER-PAD-2">
 <smd name="1" x="-1.05" y="0" dx="1.2" dy="3" layer="1" cream="no"/>
@@ -8632,7 +8604,7 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <gate name="G$1" symbol="CAPACITOR" x="0" y="0"/>
 </gates>
 <devices>
-<device name="0805" package="SMD0805@1">
+<device name="0805" package="SMD0805">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -8641,7 +8613,7 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <technology name=""/>
 </technologies>
 </device>
-<device name="1206" package="SMD1206@1">
+<device name="1206" package="SMD1206">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -8685,7 +8657,7 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <part name="SUPPLY2" library="supply2" deviceset="GND" device=""/>
 <part name="P3" library="stutz-components-library" deviceset="PIN-HEADER-5PIN" device="" value="GND DTR RTS  RX   TX"/>
 <part name="SUPPLY7" library="supply2" deviceset="GND" device=""/>
-<part name="C1" library="stutz-components-library" deviceset="CAPACITOR" device="0805" value="0.1uF"/>
+<part name="C1" library="stutz-components-library" deviceset="CAPACITOR" device="0805" value="100nF"/>
 <part name="E1" library="stutz-components-library" deviceset="ESP8266-12-2" device=""/>
 <part name="SUPPLY13" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY14" library="stutz-eagle" deviceset="+3.3V" device=""/>
